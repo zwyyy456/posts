@@ -18,7 +18,7 @@ showbreadcrumbs: false #顶部显示当前路径
 ---
 
 ## Description
-[01-pack-problem]((https://www.acwing.com/problem/content/2/))
+[01-pack-problem](https://www.acwing.com/problem/content/2/)
 
 There are $N$ items and a pack with capacity of $V$, and each item can only be used once.
 
