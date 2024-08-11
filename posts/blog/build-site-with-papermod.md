@@ -819,4 +819,21 @@ url = "categories"
 
 Hugo 博客可以很容易的部署到 Vercel 或者 Netlify 上，二者均免费。
 
-###
+### 部署至 Vercel
+
+首先在 `blog/` 目录下创建 `vercel.json` 文件，添加以下内容：
+
+```json
+{
+    "github": {
+        "silent": true
+    },
+    "build": {
+        "hugo": {
+            "version": "latest"
+        }
+    }
+}
+```
+
+将这个博客项目 push 到 GitHub，然后 Vercel 添加新项目，选择从 `Import Git Repository`，注意 `GitHub App` 权限问题，添加该项目，然后 `Framework Preset` 选择 `Hugo`，`Build and Output Settings` 勾选 `OVERRIDE`，设置为 `hugo server -D --gc`，环境变量已经在 `vercel.json` 中设置好了，故无需设置。
