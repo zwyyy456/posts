@@ -3,12 +3,10 @@ title: "关于我"
 date: 2022-09-26T00:19:15+08:00
 draft: false
 ---
-My reasons for starting a blog are quite simple. Firstly, I want to document the process of configuring various software, so I won't be at a loss the next time I need to do it. Secondly, I want to jot down my thoughts and insights from my learning journey.
+我写博客的初心很简单，一是记录一些软件的配置过程（防止第二次配置的时候又抓瞎）；二是记录下一下自己学习过程中的一些心得体会。
 
-I once came across a saying on [Gao Yichao's blog](https://gaoyichao.com/Xiaotu/?book=diary&title=about) : "To learn, read; To know, write; To master, teach."
+在 [高乙超的博客](https://gaoyichao.com/Xiaotu/?book=diary&title=about) 中，我曾经看到一句话，叫 **"To learn, read; To know, write; To master, teach"**。
 
-For the past twenty years, my learning process has primarily been about absorbing information, which worked fine for passing exams, but not much beyond that.
+过去二十年里，在学习的过程中，我一直是作为一个输入方，应付考试倒是没啥问题，但也仅此而已了。
 
-To better understand and internalize this knowledge, I’ve decided to start a blog. It's a way to take notes and organize my learning. Additionally, I hope that by sharing my experiences, I can connect with others who are on the same path, fostering an environment of mutual learning and growth.
-
-
+为了更好地体会和领悟这些知识，我决定写写博客，既是做笔记，也是对自己的所学的一种整理和输出，也希望能有更多同道者看到，从而一起交流学习、共同进步。
