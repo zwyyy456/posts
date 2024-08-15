@@ -6,7 +6,7 @@ author: ["zwyyy456"] #作
 categories: ["notes"]
 tags: ["mit", "git"]
 description: "" #描述
-weight: # 输入1可以顶置文章，默认按时间排序
+weight: # 输入 1 可以顶置文章，默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -19,7 +19,7 @@ showbreadcrumbs: false #顶部显示当前路径
 
 ## 版本控制系统介绍
 
-版本控制系统 (VCSs) 是一类用于追踪源代码（或其他文件、文件夹）改动的工具。顾名思义，这些工具可以帮助我们管理代码的修改历史；不仅如此，它还可以让协作编码变得更方便。VCS通过一系列的快照将某个文件夹及其内容保存了起来，每个快照都包含了文件或文件夹的完整状态。同时它还维护了快照创建者的信息以及每个快照的相关信息等等。
+版本控制系统 (VCSs) 是一类用于追踪源代码（或其他文件、文件夹）改动的工具。顾名思义，这些工具可以帮助我们管理代码的修改历史；不仅如此，它还可以让协作编码变得更方便。VCS 通过一系列的快照将某个文件夹及其内容保存了起来，每个快照都包含了文件或文件夹的完整状态。同时它还维护了快照创建者的信息以及每个快照的相关信息等等。
 
 版本控制系统的事实标准是 Git。
 
@@ -49,7 +49,7 @@ Git 中的 object 可以分为 blob、tree、commit 三类，每次我们执行 
 
 > 此后，在本文中不再区分作为名词的 commit 与 snapshot。
 
-在 Git 中，历史记录是一个由 snapshot（commit） 组成的有向无环图。Git 中每次 commit 都有一系列的 parent，即当前 commit 之前的一系列 commit，commit 可能有多个 parent，例如当两条分支合并为一条分支时。
+在 Git 中，历史记录是一个由 snapshot（commit）组成的有向无环图。Git 中每次 commit 都有一系列的 parent，即当前 commit 之前的一系列 commit，commit 可能有多个 parent，例如当两条分支合并为一条分支时。
 
 以可视化的方式查看这些 commit histories 时，看起来差不多是这样的：
 
@@ -62,14 +62,12 @@ o <-- o <-- o <-- o
 
 其中 `o` 表示一次 commit。箭头指向了当前 commit 的 parent，在第三次 commit 之后，历史记录分岔成了两条独立的分支。这可能因为此时需要同时开发两个不同的特性，它们之间是相互独立的。开发完成后，这些分支可能会被合并并创建一个新的 commit，这个新的 commit 会同时包含这些特性。新的 commit 会创建一个新的历史记录，看上去像这样（最新的合并提交用大写 O 标记）：
 
-<pre class="highlight">
-<code>
-o <-- o <-- o <-- o <---- <strong>O</strong>
+```txt
+o <-- o <-- o <-- o <---- O
             ^            /
              \          v
               --- o <-- o
-</code>
-</pre>
+```
 
 Git 中 commit 发生后，该 commit 是不可变的，修改内容会导致新的 commit 产生，而之前的 commit 仍然不变。
 
@@ -147,7 +145,7 @@ def load_reference(name_or_id):
         return load(name_or_id)
 ```
 
-有一个细节需要我们注意， 通常情况下，我们会想要知道“我们当前所在位置”，并将其标记下来。这样当我们创建新的 snapshot 的时候，我们就可以知道它的相对位置（如何设置它的“parent”）。在 Git 中，我们当前的位置有一个特殊的索引，它就是 "HEAD"。
+有一个细节需要我们注意，通常情况下，我们会想要知道“我们当前所在位置”，并将其标记下来。这样当我们创建新的 snapshot 的时候，我们就可以知道它的相对位置（如何设置它的“parent”）。在 Git 中，我们当前的位置有一个特殊的索引，它就是 "HEAD"。
 
 ## 仓库 (repository)
 
@@ -162,9 +160,9 @@ def load_reference(name_or_id):
 
 Git 中还包括一个和数据模型完全不相关的概念，但它确是创建提交的接口的一部分。
 
-就上面介绍的 snapshot 系统来说，您也许会期望它的实现里包括一个 “创建 snapshot ” 的命令，该命令能够基于当前工作目录的当前状态创建一个全新的 snapshot。有些版本控制系统确实是这样工作的，但 Git 不是。我们希望简洁的 snapshot，而且每次从当前状态创建 snapshot 可能效果并不理想。例如，考虑如下场景，您开发了两个独立的特性，然后您希望创建两个独立的 commit ，其中第一个 commit 仅包含第一个特性，而第二个提交仅包含第二个 commit 。或者，假设您在调试代码时添加了很多打印语句，然后您仅仅希望提交和修复 bug 相关的代码而丢弃所有的打印语句。
+就上面介绍的 snapshot 系统来说，您也许会期望它的实现里包括一个“创建 snapshot”的命令，该命令能够基于当前工作目录的当前状态创建一个全新的 snapshot。有些版本控制系统确实是这样工作的，但 Git 不是。我们希望简洁的 snapshot，而且每次从当前状态创建 snapshot 可能效果并不理想。例如，考虑如下场景，您开发了两个独立的特性，然后您希望创建两个独立的 commit，其中第一个 commit 仅包含第一个特性，而第二个提交仅包含第二个 commit。或者，假设您在调试代码时添加了很多打印语句，然后您仅仅希望提交和修复 bug 相关的代码而丢弃所有的打印语句。
 
-Git 处理这些场景的方法是使用一种叫做 “暂存区（staging area）”的机制，它允许您指定下次 snapshot 中要包括那些改动。
+Git 处理这些场景的方法是使用一种叫做“暂存区（staging area）”的机制，它允许您指定下次 snapshot 中要包括那些改动。
 
 `git add xxx` 就表示将 `xxx` 文件添加到暂存区，下次执行 `git commit` 时就会为暂存区的内容创建 snapshot。
 
@@ -376,7 +374,7 @@ command is used for merging.
 - `git commit --amend`: 编辑提交的内容或信息
 - `git reset HEAD <file>`: 恢复暂存的文件
 - `git checkout -- <file>`: 丢弃修改
-- `git restore`: git2.32版本后取代git reset 进行许多撤销操作
+- `git restore`: git2.32 版本后取代 git reset 进行许多撤销操作
 
 
 ## Git 高级操作
@@ -399,7 +397,7 @@ command is used for merging.
 有[很多](https://nvie.com/posts/a-successful-git-branching-model/)
 [不同的](https://www.endoflineblog.com/gitflow-considered-harmful)
 [处理方法](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow))
-- **GitHub**: Git 并不等同于 GitHub。 在 GitHub 中您需要使用一个被称作[拉取请求（pull request）](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)的方法来向其他项目贡献代码
+- **GitHub**: Git 并不等同于 GitHub。在 GitHub 中您需要使用一个被称作[拉取请求（pull request）](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)的方法来向其他项目贡献代码
 - **其他 Git 提供商**: GitHub 并不是唯一的。还有像 [GitLab](https://about.gitlab.com/) 和 [BitBucket](https://bitbucket.org/) 这样的平台。
 
 ## 资源
@@ -409,4 +407,4 @@ command is used for merging.
 - [Git for Computer Scientists](https://eagain.net/articles/git-for-computer-scientists/) ，简短的介绍了 Git 的数据模型，与本文相比包含较少量的伪代码以及大量的精美图片；
 - [Git from the Bottom Up](https://jwiegley.github.io/git-from-the-bottom-up/)详细的介绍了 Git 的实现细节，而不仅仅局限于数据模型。好奇的同学可以看看；
 - [How to explain git in simple words](https://smusamashah.github.io/blog/2017/10/14/explain-git-in-simple-words)；
-- [Learn Git Branching](https://learngitbranching.js.org/) 通过基于浏览器的游戏来学习 Git ；
+- [Learn Git Branching](https://learngitbranching.js.org/) 通过基于浏览器的游戏来学习 Git；
