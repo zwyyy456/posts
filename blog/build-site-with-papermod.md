@@ -6,7 +6,7 @@ author: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["hugo", "tips", "geek"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -78,7 +78,7 @@ defaultContentLanguage = "zh"
 defaultContentLanguageInSubdir = true 
 
 enableInlineShortcodes = true # 允许使用内联短码
-enableEmoji = true            # 允许使用Emoji
+enableEmoji = true            # 允许使用 Emoji
 enableRobotsTXT = false       # 允许爬虫抓取到搜索引擎，此处设置不允许
 enableGitInfo = true
 
@@ -178,6 +178,9 @@ style = "monokai"
 
 # minify.toml
 disableXML = true
+
+# outputs.toml
+home = ["HTML", "RSS", "JSON"]
 
 # permalinks.toml
 post = "/:title/"
@@ -400,9 +403,9 @@ displayFullLangName = true
 ShowPostNavLinks = true
 ShowBreadCrumbs = false # 是否显示文章路径
 ShowCodeCopyButtons = true
-math = true                  # 数学latex支持
+math = true                  # 数学 latex 支持
 
-ShowAllPagesInArchive = true # archive显示所有页面
+ShowAllPagesInArchive = true # archive 显示所有页面
 
 hideFooter = false    # 隐藏页脚
 ShowWordCounts = true
@@ -413,7 +416,7 @@ ShowToc = true     # 显示目录
 TocOpen = true     # 自动展开目录
 
 comments = true
-mainSections = "post/tech" # 非profile mode显示文章列表
+mainSections = "post/tech" # 非 profile mode 显示文章列表
 
 [params.fuseOpts]
 isCaseSensitive = false
@@ -447,7 +450,7 @@ favicon16x16 = "img/avatar.jpg"
 favicon32x32 = "img/avatar.jpg"
 apple_touch_icon = "img/avatar.jpg"
 safari_pinned_tab = "img/avatar.jpg"
-disableHLJS = true               # 启用chroma主题
+disableHLJS = true               # 启用 chroma 主题
 
 # 博客网站左上角的标题与图片
 [languages.zh.params.label]
@@ -524,8 +527,8 @@ displayFullLangName = true
 ShowPostNavLinks = true
 ShowBreadCrumbs = false      # 顶栏显示当前路径
 ShowCodeCopyButtons = true
-math = true                  # 数学latex支持
-ShowAllPagesInArchive = true # archive显示所有页面
+math = true                  # 数学 latex 支持
+ShowAllPagesInArchive = true # archive 显示所有页面
 hideFooter = false           # 隐藏页脚
 ShowWordCounts = true
 VisitCount = true
@@ -541,7 +544,7 @@ favicon16x16 = "img/avatar.jpg"
 favicon32x32 = "img/avatar.jpg"
 apple_touch_icon = "img/avatar.jpg"
 safari_pinned_tab = "img/avatar.jpg"
-disableHLJS = true                   # 启用chroma主题
+disableHLJS = true                   # 启用 chroma 主题
 
 [fuseOpts]
 isCaseSensitive = false
