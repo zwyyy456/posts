@@ -1,7 +1,7 @@
 ---
 title: "基于 Hugo 搭建个人博客"
 date: 2024-08-11T09:51:38+08:00
-lastmod: 2024-08-11T09:51:38+08:00 #更新时间
+lastmod: 2024-08-18T09:51:38+08:00 #更新时间
 author: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["hugo", "tips", "geek"]
@@ -818,6 +818,8 @@ url = "categories"
 {{ end }}
 ```
 
+#### 设置侧边显示目录
+
 ## 部署博客
 
 Hugo 博客可以很容易的部署到 Vercel 或者 Netlify 上，二者均免费。
@@ -830,17 +832,12 @@ Hugo 博客可以很容易的部署到 Vercel 或者 Netlify 上，二者均免�
 {
     "github": {
         "silent": true
-    },
-    "build": {
-        "hugo": {
-            "version": "latest"
-        }
     }
 }
 ```
 
-将这个博客项目 push 到 GitHub，然后 Vercel 添加新项目，选择从 `Import Git Repository`，注意 `GitHub App` 权限问题，添加该项目，然后 `Framework Preset` 选择 `Hugo`，`Build and Output Settings` 勾选 `OVERRIDE`，设置为 `hugo server -D --gc`，环境变量已经在 `vercel.json` 中设置好了，故无需设置。
-
+将这个博客项目 push 到 GitHub，然后 Vercel 添加新项目，选择从 `Import Git Repository`，注意 `GitHub App` 权限问题，添加该项目，然后 `Framework Preset` 选择 `Hugo`，`Environment Variables` 设置 Key 为 `HUGO_VERSION`，Value 设置为当前最新 hugo 的版本号。
 如下图所示，点击 `Deploy` 即可：
 
-![QvC4Vl](https://pic-upyun.zwyyy456.tech/uPic/QvC4Vl.png)
+![bVYCWn](https://pic-upyun.zwyyy456.tech/uPic/bVYCWn.png)
+
