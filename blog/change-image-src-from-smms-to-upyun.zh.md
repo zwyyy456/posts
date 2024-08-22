@@ -6,12 +6,12 @@ author: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["blog", "hugo", "image"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
 showToc: true # 显示目录
-TocOpen: false # 自动展开目录
+TocOpen: true # 自动展开目录
 hidemeta: false # 是否隐藏文章的元信息，如发布日期、作者等
 disableShare: true # 底部不显示分享栏
 showbreadcrumbs: false #顶部显示当前路径
@@ -44,7 +44,7 @@ showbreadcrumbs: false #顶部显示当前路径
         {{ i18n "powered_by" }} <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a
             href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a> & <a
             href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
-            <img src='/images/upyun.svg' alt="又拍云" width="53" height="18"
+            <img src='/img/upyun.svg' alt="又拍云" width="53" height="18"
                 style="fill: currentColor; position: relative; top: +3.5px;">
         </a>.
         {{ if (and .Site.Params.commit .GitInfo) }}
@@ -52,7 +52,7 @@ showbreadcrumbs: false #顶部显示当前路径
             .GitInfo.AbbreviatedHash }}</a>]
         {{ end }}
         <br>
-        <a href="https://beian.miit.gov.cn/" target="_blank">湘ICP备2023038416号</a>
+        <a href="https://beian.miit.gov.cn/" target="_blank">湘 ICP 备 2023038416 号</a>
     </section>
 </footer>
 ```
