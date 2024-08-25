@@ -2,7 +2,7 @@
 title: "虚拟内存"
 date: 2023-07-28T19:55:47+08:00
 lastmod: 2023-07-28T19:55:47+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["csapp", "linux"]
 description: "" #描述

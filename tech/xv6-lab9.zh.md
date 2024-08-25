@@ -2,7 +2,7 @@
 title: "Xv6 Lab9: Locks"
 date: 2023-07-29T14:28:58+08:00
 lastmod: 2023-07-29T14:28:58+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["xv6", "os", "lab", "mit"]
 description: "" #描述

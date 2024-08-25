@@ -2,7 +2,7 @@
 title: "RHEL 7 个人开发环境部署"
 date: 2024-08-21T23:22:48+08:00
 lastmod: 2024-08-21T23:22:48+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial", "linux"]
 tags: ["linux", "geek"]
 description: "" #描述

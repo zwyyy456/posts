@@ -2,7 +2,7 @@
 title: "位运算与集合"
 date: 2023-01-05T14:50:46+08:00
 lastmod: 2023-01-05T14:50:46+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms"]
 description: "" #描述

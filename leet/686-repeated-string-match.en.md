@@ -2,7 +2,7 @@
 title: "686 Repeated String Match"
 date: 2023-03-27T21:22:53+08:00
 lastmod: 2023-03-27T21:22:53+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: [""]
 tags: [""]
 description: "" #描述

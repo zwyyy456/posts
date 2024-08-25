@@ -2,7 +2,7 @@
 title: "Web Day13：服务器完善"
 date: 2023-11-20T10:45:06+08:00
 lastmod: 2023-11-20T10:45:06+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: [""]
 tags: [""]
 description: "" #描述

@@ -2,7 +2,7 @@
 title: "Sort_in_cpp"
 date: 2022-11-01T15:14:44+08:00
 lastmod: 2022-11-01T15:14:44+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: [""]
 tags: [""]
 description: "" #描述

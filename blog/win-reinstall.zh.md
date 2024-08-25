@@ -2,7 +2,7 @@
 title: "Win11 重装记录"
 date: 2024-03-03T11:45:50+08:00
 lastmod: 2024-03-03T11:45:50+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["win11", "dev"]
 description: "" #描述

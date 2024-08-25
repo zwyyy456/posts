@@ -2,7 +2,7 @@
 title: "Linux 虚拟内存系统"
 date: 2023-06-18T14:50:57+08:00
 lastmod: 2023-06-18T14:50:57+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["csapp", "linux"]
 description: "" #描述

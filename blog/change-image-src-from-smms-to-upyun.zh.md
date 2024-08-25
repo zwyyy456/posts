@@ -2,7 +2,7 @@
 title: "将博客的图床从 SM.MS 迁移到又拍云"
 date: 2023-12-26T16:25:29+08:00
 lastmod: 2023-12-26T16:25:29+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["blog", "hugo", "image"]
 description: "" #描述

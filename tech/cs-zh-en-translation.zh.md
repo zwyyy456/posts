@@ -2,7 +2,7 @@
 title: "计算机常用术语中英文对比"
 date: 2024-06-15T16:19:53+08:00
 lastmod: 2024-06-15T16:19:53+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["cs"]
 description: "" #描述

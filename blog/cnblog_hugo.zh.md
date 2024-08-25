@@ -2,7 +2,7 @@
 title: "便捷同步本地的博客文档到博客园"
 date: 2023-06-14T14:22:30+08:00
 lastmod: 2023-06-14T14:22:30+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["trick"]
 description: "" #描述

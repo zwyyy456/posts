@@ -2,7 +2,7 @@
 title: "Web Day9：建立读写缓冲类"
 date: 2023-11-18T14:53:43+08:00
 lastmod: 2023-11-18T14:53:43+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["cpp", "web server"]
 description: "" #描述

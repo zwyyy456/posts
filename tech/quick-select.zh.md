@@ -2,7 +2,7 @@
 title: "快速选择算法"
 date: 2023-04-11T19:55:41+08:00
 lastmod: 2023-04-11T19:55:41+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms"]
 description: "" #描述

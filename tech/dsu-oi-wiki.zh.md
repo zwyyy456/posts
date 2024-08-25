@@ -2,7 +2,7 @@
 title: "并查集"
 date: 2023-03-22T17:59:31+08:00
 lastmod: 2023-03-22T17:59:31+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["dsu", "data structure and algorithms"]
 description: "" #描述

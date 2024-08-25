@@ -2,7 +2,7 @@
 title: "Xv6 Lab6: Copy-on-Write Fork for xv6"
 date: 2023-07-17T13:42:27+08:00
 lastmod: 2023-07-17T13:42:27+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["xv6", "os", "lab", "mit"]
 description: "" #描述

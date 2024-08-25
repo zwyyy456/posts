@@ -2,7 +2,7 @@
 title: "一维动态规划-基础版"
 date: 2022-09-28T19:23:30+08:00
 lastmod: 2022-09-28T19:23:30+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms", "dynamic programming"]
 description: "" #描述

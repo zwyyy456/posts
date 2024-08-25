@@ -2,7 +2,7 @@
 title: "Vercel 部署 Hugo"
 date: 2022-11-16T16:46:59+08:00
 lastmod: 2022-11-16T16:46:59+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["tips", "geek"]
 description: "" #描述

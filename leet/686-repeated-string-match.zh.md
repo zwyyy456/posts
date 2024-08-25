@@ -2,7 +2,7 @@
 title: "686.重复叠加字符串匹配 (Medium)"
 date: 2023-03-27T21:22:38+08:00
 lastmod: 2023-03-27T21:22:38+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["leetcode"]
 tags: ["kmp"]
 description: "" #描述

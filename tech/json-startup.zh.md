@@ -2,7 +2,7 @@
 title: "Json 快速入门"
 date: 2024-05-04T10:10:30+08:00
 lastmod: 2024-05-04T10:10:30+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["json"]
 description: "" #描述

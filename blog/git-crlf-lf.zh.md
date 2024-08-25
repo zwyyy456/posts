@@ -2,7 +2,7 @@
 title: "Git 如何避免 'warning: LF will be replaced by CRLF'"
 date: 2023-12-18T22:02:46+08:00
 lastmod: 2023-12-18T22:02:46+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["git", "trick"]
 description: "" #描述

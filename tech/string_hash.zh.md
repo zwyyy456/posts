@@ -2,7 +2,7 @@
 title: "字符串哈希算法"
 date: 2023-05-15T11:52:54+08:00
 lastmod: 2023-05-15T11:52:54+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["hash table", "string"]
 description: "" #描述

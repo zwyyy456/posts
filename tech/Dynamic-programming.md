@@ -2,7 +2,7 @@
 title: "Dynamic Programming"
 date: 2022-09-29T16:25:12+08:00
 lastmod: 2022-09-29T16:25:12+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms", "dynamic programming"]
 description: "" #描述

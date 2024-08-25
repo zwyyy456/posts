@@ -2,7 +2,7 @@
 title: "Sublime Text4 使用 NeoVintageous 插件"
 date: 2023-11-08T19:08:56+08:00
 lastmod: 2023-11-08T19:08:56+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["nvim"]
 description: "" #描述

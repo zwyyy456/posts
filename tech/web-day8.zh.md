@@ -2,7 +2,7 @@
 title: "Web Day8：抽象出 Connection 类"
 date: 2023-11-16T15:25:27+08:00
 lastmod: 2023-11-16T15:25:27+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["cpp", "web server"]
 description: "" #描述

@@ -2,7 +2,7 @@
 title: "N1 安装 Armbian 简单教程"
 date: 2022-12-09T12:33:32+08:00
 lastmod: 2022-12-09T12:33:32+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["tips", "geek", "armbian"]
 description: "" #描述

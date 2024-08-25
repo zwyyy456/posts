@@ -2,7 +2,7 @@
 title: "快速幂与快速乘"
 date: 2022-11-19T11:51:26+08:00
 lastmod: 2022-11-19T11:51:26+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms"]
 description: "" #描述

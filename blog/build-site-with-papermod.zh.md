@@ -2,7 +2,7 @@
 title: "基于 Hugo 搭建个人博客"
 date: 2024-08-11T09:51:38+08:00
 lastmod: 2024-08-18T09:51:38+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["hugo", "tips", "geek"]
 description: "" #描述
