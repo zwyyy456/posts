@@ -2,7 +2,7 @@
 title: "My_blog_powered_by_Hugo&PaperMod"
 date: 2022-09-26T20:30:31+08:00
 lastmod: 2022-09-26T20:30:31+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: [""]
 tags: [""]
 description: "" #描述

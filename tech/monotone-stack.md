@@ -2,7 +2,7 @@
 title: "monotone stack"
 date: 2022-11-11T15:55:04+08:00
 lastmod: 2022-11-11T15:55:04+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms", "monotone stack"]
 description: "" #描述

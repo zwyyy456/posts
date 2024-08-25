@@ -2,7 +2,7 @@
 title: "01 kanpsack problem"
 date: 2022-10-01T15:08:23+08:00
 lastmod: 2022-10-01T15:08:23+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms", "dynamic programming"]
 description: "notes and thoughts about 01-pack-problem" #描述

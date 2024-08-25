@@ -2,7 +2,7 @@
 title: "Vimium: 让你像使用 Vim 那样控制浏览器"
 date: 2023-11-05T17:05:59+08:00
 lastmod: 2023-11-05T17:05:59+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["vim"]
 description: "" #描述

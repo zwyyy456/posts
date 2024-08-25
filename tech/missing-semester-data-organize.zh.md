@@ -2,7 +2,7 @@
 title: "计算机教育缺失的一课：数据整理"
 date: 2024-06-14T19:26:09+08:00
 lastmod: 2024-06-14T19:26:09+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["mit"]
 description: "" #描述

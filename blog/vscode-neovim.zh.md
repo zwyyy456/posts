@@ -2,7 +2,7 @@
 title: "vscode使用 vscode-neovim 插件"
 date: 2023-11-08T16:52:21+08:00
 lastmod: 2023-11-08T16:52:21+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["nvim", "vscode"]
 description: "" #描述

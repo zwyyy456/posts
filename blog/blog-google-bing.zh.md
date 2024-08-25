@@ -2,7 +2,7 @@
 title: "使博客被搜索引擎收录"
 date: 2024-05-15T15:44:28+08:00
 lastmod: 2024-05-15T15:44:28+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["hugo", "blog"]
 description: "" #描述

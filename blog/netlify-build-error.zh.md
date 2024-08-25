@@ -2,7 +2,7 @@
 title: "解决 Netlify 部署 Hugo 静态博客时的 `fatal: remote error: upload-pack: not our ref` 问题"
 date: 2023-12-18T12:46:49+08:00
 lastmod: 2023-12-18T12:46:49+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["hugo", "trick", "netlify"]
 description: "" #描述

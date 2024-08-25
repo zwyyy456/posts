@@ -2,7 +2,7 @@
 title: "字典树"
 date: 2023-05-29T09:54:58+08:00
 lastmod: 2023-05-29T09:54:58+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms"]
 description: "" #描述

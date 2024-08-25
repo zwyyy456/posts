@@ -2,7 +2,7 @@
 title: "ssh简单教程"
 date: 2023-03-14T16:23:37+08:00
 lastmod: 2023-03-14T16:23:37+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["geek", "ssh"]
 description: "" #描述

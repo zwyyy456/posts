@@ -2,7 +2,7 @@
 title: "RemNote 入门教程"
 date: 2023-12-14T14:57:19+08:00
 lastmod: 2023-12-14T14:57:19+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["remnote", "trick"]
 description: "" #描述

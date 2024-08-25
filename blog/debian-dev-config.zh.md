@@ -2,7 +2,7 @@
 title: "Debian 开发环境配置"
 date: 2023-11-17T16:16:27+08:00
 lastmod: 2023-11-17T16:16:27+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["Debian", "dev"]
 description: "" #描述

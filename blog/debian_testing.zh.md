@@ -2,7 +2,7 @@
 title: "安装 Debian bookworm"
 date: 2022-11-12T09:58:14+08:00
 lastmod: 2022-11-12T09:58:14+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["tips", "geek", "debian"]
 description: "" #描述

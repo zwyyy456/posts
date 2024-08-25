@@ -2,7 +2,7 @@
 title: "MIT 6.S081 File system performance and fast crash recovery"
 date: 2023-07-27T16:34:51+08:00
 lastmod: 2023-07-27T16:34:51+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["linux", "mit", "os", "xv6"]
 description: "" #描述

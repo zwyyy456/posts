@@ -2,7 +2,7 @@
 title: "Linux 动态内存分配"
 date: 2023-06-20T15:29:09+08:00
 lastmod: 2023-06-20T15:29:09+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["csapp"]
 description: "" #描述

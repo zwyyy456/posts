@@ -2,7 +2,7 @@
 title: "MIT 6.s081 实验环境搭建"
 date: 2023-06-28T15:45:16+08:00
 lastmod: 2023-06-28T15:45:16+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["trick"]
 description: "" #描述

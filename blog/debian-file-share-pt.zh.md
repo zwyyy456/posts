@@ -2,7 +2,7 @@
 title: "debian 配置文件共享（samba、nfs）与 pt"
 date: 2023-07-21T18:03:01+08:00
 lastmod: 2023-07-21T18:03:01+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: [""]
 tags: [""]
 description: "" #描述

@@ -2,7 +2,7 @@
 title: "Web Day7：为服务器添加一个 Acceptor"
 date: 2023-11-16T10:55:51+08:00
 lastmod: 2023-11-16T10:55:51+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: [""]
 tags: [""]
 description: "" #描述

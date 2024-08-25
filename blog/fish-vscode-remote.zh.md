@@ -2,7 +2,7 @@
 title: "解决远程主机的默认 shell 为 fish 时，vscode remote 无法连接的问题"
 date: 2023-07-08T11:30:15+08:00
 lastmod: 2023-07-08T11:30:15+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["tips"]
 description: "" #描述

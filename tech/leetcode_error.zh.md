@@ -2,7 +2,7 @@
 title: "Leetcode 常见报错的原因分析"
 date: 2023-03-01T19:02:35+08:00
 lastmod: 2023-03-01T19:02:35+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["leetcode"]
 tags: ["attention", "data structure and algorithms"]
 description: "" #描述

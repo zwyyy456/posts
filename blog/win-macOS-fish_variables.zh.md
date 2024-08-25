@@ -2,7 +2,7 @@
 title: "解决 macOS 上的 fish 出现的 'et_color Unkown color ' 问题"
 date: 2023-12-18T11:14:37+08:00
 lastmod: 2023-12-18T11:14:37+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["trick", "fish"]
 description: "" #描述

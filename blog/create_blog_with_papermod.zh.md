@@ -2,7 +2,7 @@
 title: "基于 hugo 和 papermod 主题搭建自己的博客"
 date: 2022-11-04T18:22:26+08:00
 lastmod: 2022-11-04T18:22:26+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["geek", "hugo", "tips"]
 description: "" #描述

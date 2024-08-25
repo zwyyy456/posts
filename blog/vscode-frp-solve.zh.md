@@ -2,7 +2,7 @@
 title: "解决 vscode remote 无法通过 frp 连接到内网机器的问题"
 date: 2023-09-11T14:58:42+08:00
 lastmod: 2023-09-11T14:58:42+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: [""]
 tags: [""]
 description: "" #描述

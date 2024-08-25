@@ -2,7 +2,7 @@
 title: "解决webots无法从github下载外部资源的问题"
 date: 2022-10-13T10:25:10+08:00
 lastmod: 2022-10-13T10:25:10+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: [""]
 tags: [""]
 description: "" #描述

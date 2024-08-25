@@ -2,7 +2,7 @@
 title: "MIT 6.S081 操作系统组织架构"
 date: 2023-06-29T18:59:04+08:00
 lastmod: 2023-06-29T18:59:04+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["xv6","mit"]
 description: "" #描述

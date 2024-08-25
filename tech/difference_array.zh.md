@@ -2,7 +2,7 @@
 title: "差分数组"
 date: 2023-10-06T17:50:12+08:00
 lastmod: 2023-10-06T17:50:12+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms", "difference array"]
 description: "" #描述

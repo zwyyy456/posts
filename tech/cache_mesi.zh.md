@@ -2,7 +2,7 @@
 title: "CPU 缓存一致性：MESI"
 date: 2023-06-07T10:36:47+08:00
 lastmod: 2023-06-07T10:36:47+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["csapp"]
 description: "" #描述
