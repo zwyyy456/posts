@@ -3,7 +3,7 @@ title: "Json 快速入门"
 date: 2024-05-04T10:10:30+08:00
 lastmod: 2024-05-04T10:10:30+08:00 #更新时间
 authors: ["zwyyy456"] #作者
-categories: ["notes"]
+categories: ["tech"]
 tags: ["json"]
 description: "" #描述
 weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序

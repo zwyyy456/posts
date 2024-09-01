@@ -3,7 +3,7 @@ title: "Web Day6：EventLoop 类与事件驱动"
 date: 2023-11-15T20:09:00+08:00
 lastmod: 2023-11-15T20:09:00+08:00 #更新时间
 authors: ["zwyyy456"] #作者
-categories: ["notes"]
+categories: ["tech"]
 tags: ["cpp", "web server"]
 description: "" #描述
 weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序

@@ -2,8 +2,8 @@
 title: "Xv6 Lab4: Traps"
 date: 2023-07-13T12:51:50+08:00
 lastmod: 2023-07-13T12:51:50+08:00 #更新时间
-authos: ["zwyyy456"] #作者
-categories: ["notes"]
+author: ["zwyyy456"] #作者
+categories: ["tech"]
 tags: ["xv6", "os", "lab", "mit"]
 description: "" #描述
 weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序

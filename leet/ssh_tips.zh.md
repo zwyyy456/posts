@@ -3,7 +3,7 @@ title: "ssh简单教程"
 date: 2023-03-14T16:23:37+08:00
 lastmod: 2023-03-14T16:23:37+08:00 #更新时间
 authors: ["zwyyy456"] #作者
-categories: ["tutorial"]
+categories: ["setup"]
 tags: ["geek", "ssh"]
 description: "" #描述
 weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序

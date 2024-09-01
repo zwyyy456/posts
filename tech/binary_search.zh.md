@@ -3,7 +3,7 @@ title: "二分答案"
 date: 2023-06-01T15:53:13+08:00
 lastmod: 2023-06-01T15:53:13+08:00 #更新时间
 authors: ["zwyyy456"] #作者
-categories: ["notes"]
+categories: ["tech"]
 tags: ["binary search", "data structure and algorithms"]
 description: "" #描述
 weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
