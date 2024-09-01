@@ -3,7 +3,7 @@ title: "自行制作 nerd font"
 date: 2023-03-18T15:06:08+08:00
 lastmod: 2023-03-18T15:06:08+08:00 #更新时间
 authors: ["zwyyy456"] #作者
-categories: [tutorial"]
+categories: [tutorial]
 tags: ["tips", "geek"]
 description: "" #描述
 weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
