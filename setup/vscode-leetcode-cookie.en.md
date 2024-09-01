@@ -2,7 +2,7 @@
 title: "Log in Leetcode in Vscode With Cookies" #标题
 date: 2022-09-27T23:02:36+08:00 #创建时间
 lastmod: 2022-09-27T23:02:36+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["setup"]
 tags: ["vscode", "tips"]
 description: "" #描述
