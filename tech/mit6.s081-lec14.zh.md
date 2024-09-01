@@ -6,7 +6,7 @@ author: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["xv6", "mit", "os"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -43,7 +43,7 @@ xv6 将磁盘划分为几个功能部分，如下图所示：
 
 ## Buffer cache layer
 
-buffer cache 的实现代码在 `kernel/bio.c`， 它主要有两个任务：
+buffer cache 的实现代码在 `kernel/bio.c`，它主要有两个任务：
 
 1. 同步进程对磁盘的访问，内存中只有一份磁盘的 block 的拷贝，并且同一时间内只有一个进程可以使用这份拷贝（同时读呢，是否可行？）；
 2. 缓存 popluar blocks 到内存中，从而可以直接从内存访问磁盘的 popular blocks，避免再从速度极其慢的磁盘中读取；
@@ -67,7 +67,7 @@ buffer 中含有两个状态字段，`valid` 说明这个 buffer 含有磁盘的
 
 `bget` 遍历 buffer 链表寻找与 `dev` 和 `blockno` 对应的 buffer，并为这个 buffer 申请 sleep-lock，返回未解锁的 buffer；如果找不到对应的 buffer，`bget` 会从 head 开始，反向遍历双向链表，找一个 `refcnt` 为 $0$ 的 buffer，将这个 buffer 的 valid 字段标记为 $0$，即说明我们要重新从磁盘对应的 sector 读取数据到 buffer。
 
-`bget` 持有 `bache.lock` 保证了“寻找对应的 buffer 以及如果不存在，为 block 分配对应的 buffer” 这个过程是原子的。
+`bget` 持有 `bache.lock` 保证了“寻找对应的 buffer 以及如果不存在，为 block 分配对应的 buffer”这个过程是原子的。
 
 `b->refcnt = 1` 保证了这个 buffer 不会被其他进程拿来作为 victim buffer 去存放其他 block 的数据，因此可以先释放 `bcache.lock` 再申请 `b->lock`。
 
@@ -268,7 +268,7 @@ void ilock(struct inode *ip) {
 
 `iput` 会向磁盘写入，这意味着任何 file system call 都可能向磁盘写入（因为系统调用可能是最后一个引用该 inode 的系统调用），哪怕它看起来只是读取磁盘，因此，所有 file system call 都应该打包成 transaction 来处理。
 
-## Code：directory layer
+## Code: directory layer
 
 目录其内部实现其实很像一个文件，只不过它的 inode `type` 是 `T_DIR`，这个 inode 的 data blocks 里面的数据是一系列的 directory entry，每个 entry 都是一个 `dirent` 结构体。inode 为 $0$ 的 directory entry 是空闲的。
 

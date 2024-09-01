@@ -6,7 +6,7 @@ author: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["csapp", "linux"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -93,9 +93,9 @@ VM area 可以映射到两种文件类型的对象中的一种（Areas can be ma
 
 内存反向映射其实主要要解决三个问题：
 
-- 当我们把一个 PP 换出到磁盘（swap space） 时，我们要如何找到这个 PP 对应的 VP，从而更新该 VP 的 PTE 的 `pte->present`，并且
+- 当我们把一个 PP 换出到磁盘（swap space）时，我们要如何找到这个 PP 对应的 VP，从而更新该 VP 的 PTE 的 `pte->present`，并且
 - 这个 PP 要换出到磁盘的何处；
-- 当发生缺页中断后，要将 VP 对应的 PP 从磁盘（swap space）中 swap_in 到内存时，我们如何找到这个存在于磁盘中的 “VP 对应的 PP”；
+- 当发生缺页中断后，要将 VP 对应的 PP 从磁盘（swap space）中 swap_in 到内存时，我们如何找到这个存在于磁盘中的“VP 对应的 PP”；
 
 这里说的内存反向映射其实就是从 PP 到 VP 的一个映射：
 

@@ -1,12 +1,12 @@
 ---
-title: "配置 Sublime Text4为 C++ 编辑器"
+title: "配置 Sublime Text4 为 C++ 编辑器"
 date: 2023-02-06T09:06:25+08:00
 lastmod: 2023-02-06T09:06:25+08:00 #更新时间
 author: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["sublime", "LSP", "tips"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -20,11 +20,11 @@ showbreadcrumbs: false #顶部显示当前路径
 ## 概述
 涉及以下插件的安装和配置`Package Control` `Terminus` `LSP` `LSP-clangd` `clang-format` `LSP-pyright` `LSP-json`
 
-## 配置sublime
+## 配置 sublime
 安装`Package Control`以进行包管理。
 
 ## Terminus
-安装`Terminus`以实现sublime text4内的terminal。
+安装`Terminus`以实现 sublime text4 内的 terminal。
 
 绑定快捷键：
 ```json
@@ -43,9 +43,9 @@ showbreadcrumbs: false #顶部显示当前路径
 ]
 ```
 
-自定义在`Terminus`的终端中编译运行cpp文件:
+自定义在`Terminus`的终端中编译运行 cpp 文件：
 
-在`Tools->Build System->New Build System`中新建编译文件，保存为`CppTerminus.sublime-build`，替换内容为:
+在`Tools->Build System->New Build System`中新建编译文件，保存为`CppTerminus.sublime-build`，替换内容为：
 ```json
 {
 	// MacOS
@@ -90,12 +90,12 @@ showbreadcrumbs: false #顶部显示当前路径
 ```
 注意要保证源文件和`bin`文件夹、`in_out`文件夹在同一目录下。
 
-## 配置LSP + LSP-clangd
+## 配置 LSP + LSP-clangd
 
-安装这两个插件，windows和linux需要手动安装`clangd`并添加到path。
+安装这两个插件，windows 和 linux 需要手动安装`clangd`并添加到 path。
 
-### mac下安装clangd
-我的mac已经自带了`clangd`，安装好这两个插件即可实现语法提示；
+### mac 下安装 clangd
+我的 mac 已经自带了`clangd`，安装好这两个插件即可实现语法提示；
 如果没有安装`clangd`，通过以下命令安装：
 ```shell
 brew install llvm
@@ -112,17 +112,17 @@ set -gx LDFLAGS -L/opt/homebrew/opt/llvm/lib
 set -gx CPPFLAGS -I/opt/homebrew/opt/llvm/include
 ```
 
-### Debian(testing)安装clangd和clang
+### Debian(testing) 安装 clangd 和 clang
 `sudo apt install clangd`, `sudo apt install llvm`, `sudo apt install clang`
 
-### windows下安装llvm
-借助scoop, 执行 `scoop install llvm`，然后安装**Visual Stdudio Build Tools**，鉴于windows上clang默认的c++库就是msvc，所以就用这个吧，别折腾`mingw`了。
+### windows 下安装 llvm
+借助 scoop, 执行 `scoop install llvm`，然后安装**Visual Stdudio Build Tools**，鉴于 windows 上 clang 默认的 c++ 库就是 msvc，所以就用这个吧，别折腾`mingw`了。
 
-### 配置LSP-clangd
+### 配置 LSP-clangd
 到`Preferences->Package Settings->LSP->Settings`，写入这样几行
 ```json
 {
-    // 在主页面只显示error红色下划线
+    // 在主页面只显示 error 红色下划线
     //"show_diagnostics_severity_level": 1,
     // 代码提示显示灯泡图标
     "show_code_actions": "bulb",
@@ -136,15 +136,15 @@ set -gx CPPFLAGS -I/opt/homebrew/opt/llvm/include
 // Settings in here override those in "LSP-clangd/LSP-clangd.sublime-settings"
 {
     "initializationOptions": {
-        // 启用clang-tidy代码检查，可能启用后warning会比较多，自己看着办吧
+        // 启用 clang-tidy 代码检查，可能启用后 warning 会比较多，自己看着办吧
         "clangd.clang-tidy": true,
-        // 美化clangd输出的JSON
+        // 美化 clangd 输出的 JSON
         "clangd.pretty": true,
     }
 }
 ```
 
-再到`project/code`（源文件所在目录）下新建`.clang-tidy`文件，写入:
+再到`project/code`（源文件所在目录）下新建`.clang-tidy`文件，写入：
 ```txt
 Checks: "bugprone-*,\
 google-*,\
@@ -164,7 +164,7 @@ CheckOptions:
     value: '80'
 ```
 
-LSP-clangd默认是使用`c++98`来检查代码的，要修改为`c++17`，需要在项目根目录下新建`.clangd`文件，文件内容如下:
+LSP-clangd 默认是使用`c++98`来检查代码的，要修改为`c++17`，需要在项目根目录下新建`.clangd`文件，文件内容如下：
 
 ```txt
 CompileFlags:
@@ -413,17 +413,17 @@ TabWidth: 4
 UseTab: Never
 ```
 
-## 命令行使用sublime text4打开文件
-mac下添加软连接: `ln  /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl`
+## 命令行使用 sublime text4 打开文件
+mac 下添加软连接：`ln  /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl`
 
-debian下执行`sudo ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl`
+debian 下执行`sudo ln -s /opt/sublime_text/sublime_text /usr/local/bin/subl`
 
-之后就能用`subl test.cpp`命令来调用sublime text4打开`test.cpp`了。
+之后就能用`subl test.cpp`命令来调用 sublime text4 打开`test.cpp`了。
 
-## leetcode相关配置
-安装leetgo: `brew install j178/tap/leetgo`
+## leetcode 相关配置
+安装 leetgo: `brew install j178/tap/leetgo`
 
-在预期的leetcode项目目录下执行`leetgo init`，然后配置`leetgo.yaml`
+在预期的 leetcode 项目目录下执行`leetgo init`，然后配置`leetgo.yaml`
 ```yaml
 author: zwyyy456
 language: en

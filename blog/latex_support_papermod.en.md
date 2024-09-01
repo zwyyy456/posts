@@ -5,7 +5,7 @@ draft: false
 tags: ["hugo", "geek", "tips"]
 categories: ["tutorial"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -50,7 +50,7 @@ showbreadcrumbs: false #顶部显示当前路径
 编辑`config.toml`，添加如下内容
 ```toml
 [params]
-        math = true # 添加latex支持
+        math = true # 添加 latex 支持
 ```
 
 ## Reference

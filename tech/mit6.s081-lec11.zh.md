@@ -6,7 +6,7 @@ author: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["xv6", "mit", "os"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -39,7 +39,7 @@ xv6 使用硬件定时器中断来保证 context switch（上下文切换）。
 
 `swtch` 执行为内核线程切换的保存和恢复工作。`swtch` 的主要工作就是保存和恢复 riscv 的寄存器，又被称为上下文。
 
-当一个进程要让出 cpu 时，该进程的内核线程会调用 `swtch` 来把该进程的 context 保存起来，并返回到 scheduler 线程的 context，每个 context 都包含于 `strcut context`。 `context` 结构体可能是 `struct proc` 的成员或者 `struct cpu` 的成员（ scheduler 线程）。
+当一个进程要让出 cpu 时，该进程的内核线程会调用 `swtch` 来把该进程的 context 保存起来，并返回到 scheduler 线程的 context，每个 context 都包含于 `strcut context`。 `context` 结构体可能是 `struct proc` 的成员或者 `struct cpu` 的成员（scheduler 线程）。
 
 ```c
 struct context {

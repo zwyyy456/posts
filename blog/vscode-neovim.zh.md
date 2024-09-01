@@ -1,12 +1,12 @@
 ---
-title: "vscode使用 vscode-neovim 插件"
+title: "vscode 使用 vscode-neovim 插件"
 date: 2023-11-08T16:52:21+08:00
 lastmod: 2023-11-08T16:52:21+08:00 #更新时间
 author: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["nvim", "vscode"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -77,7 +77,7 @@ keymap.set("n", "gcc", "<Plug>VSCodeCommentaryLine")
 
 利用 `comment.nvim` 来实现 vscode 的调用 `gc` 快捷键注释。
 
-文件结构目录如下:
+文件结构目录如下：
 
 ```txt
 ├── LICENSE

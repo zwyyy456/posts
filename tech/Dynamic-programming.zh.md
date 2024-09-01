@@ -1,12 +1,12 @@
 ---
-title: "一维动态规划-基础版"
+title: "一维动态规划 - 基础版"
 date: 2022-09-28T19:23:30+08:00
 lastmod: 2022-09-28T19:23:30+08:00 #更新时间
 author: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms", "dynamic programming"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -24,15 +24,15 @@ showbreadcrumbs: false #顶部显示当前路径
 
 ## 例题
 - [509.斐波那契数](https://leetcode.cn/problems/fibonacci-number/)
-    - [509.斐波那契数-题解](https://blog.zwyyy456.tech/zh/posts/tech/509.fibonacci-number/)
+    - [509.斐波那契数 - 题解](https://blog.zwyyy456.tech/zh/posts/tech/509.fibonacci-number/)
 - [70.爬楼梯](https://leetcode.com/problems/climbing-stairs/)
-    - [70.爬楼梯-题解](https://blog.zwyyy456.tech/zh/posts/tech/70.climbing-stairs/)
+    - [70.爬楼梯 - 题解](https://blog.zwyyy456.tech/zh/posts/tech/70.climbing-stairs/)
 - [746.使用最小花费爬楼梯](https://leetcode.cn/problems/min-cost-climbing-stairs/)
-    - [746.使用最小花费爬楼梯-题解](https://blog.zwyyy456.tech/zh/posts/tech/746.min-cost-climbing-stairs/)
+    - [746.使用最小花费爬楼梯 - 题解](https://blog.zwyyy456.tech/zh/posts/tech/746.min-cost-climbing-stairs/)
 - [343.整数拆分](https://leetcode.cn/problems/integer-break/)
-    - [343.整数拆分-题解](https://blog.zwyyy456.tech/zh/posts/tech/343.integer-break/)
+    - [343.整数拆分 - 题解](https://blog.zwyyy456.tech/zh/posts/tech/343.integer-break/)
 - [62.不同路径](https://leetcode.cn/problems/unique-paths/)
-    - [62.不同路径-题解](https://blog.zwyyy456.tech/zh/posts/tech/62.unique-paths/)
-- [63.不同路径II](https://leetcode.cn/problems/unique-paths-ii/)
-    - [63.不同路径II-题解](https://blog.zwyyy456.tech/zh/posts/tech/63.unique-paths-ii/)
+    - [62.不同路径 - 题解](https://blog.zwyyy456.tech/zh/posts/tech/62.unique-paths/)
+- [63.不同路径 II](https://leetcode.cn/problems/unique-paths-ii/)
+    - [63.不同路径 II-题解](https://blog.zwyyy456.tech/zh/posts/tech/63.unique-paths-ii/)
 

@@ -6,7 +6,7 @@ author: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["kmp", "data structure and algorithms"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -17,10 +17,10 @@ disableShare: true # 底部不显示分享栏
 showbreadcrumbs: false #顶部显示当前路径
 ---
 ## 问题描述
-**kmp**算法解决的是字符串匹配问题，即:字符串P是否是字符串S的子串？如果是，它出现在s的哪些位置？这里我们称 **S** 为主串，**P** 为模式串。
+**kmp**算法解决的是字符串匹配问题，即：字符串 P 是否是字符串 S 的子串？如果是，它出现在 s 的哪些位置？这里我们称 **S** 为主串，**P** 为模式串。
 
 ## 思路
-首先是暴力匹配算法（Brute-Force算法），代码如下：
+首先是暴力匹配算法（Brute-Force 算法），代码如下：
 ```cpp
 void BruteForce(string s, string p) {
     int len_s = s.size(), len_p = p.size();
@@ -43,7 +43,7 @@ void BruteForce(string s, string p) {
 
 为了降低字符串比较的复杂度，我们就必须降低比较的趟数，**kmp**算法的主要思想就是尽可能利用残余信息，即字符串如果在 `j = r` 处匹配失败了，那么前`r`个字符一定匹配成功了，暴力算法中，我们每次不匹配的情况下，都让`j = 0`，即模式串又从头开始匹配，这就完全没有利用比较带来的信息。
 
-这里，我们可以找模式串的前缀子串和后缀子串，并得到对前`r`个字符组成的字符串，相等的前缀子串和后缀子串的最大长度，例如 `p = "aabaac"`，那么对前$5$个字符，这个最大长度为2，所以对模式串 p 应该从 `j = 2` 处开始继续匹配，主串的 `i` 保持不变
+这里，我们可以找模式串的前缀子串和后缀子串，并得到对前`r`个字符组成的字符串，相等的前缀子串和后缀子串的最大长度，例如 `p = "aabaac"`，那么对前$5$个字符，这个最大长度为 2，所以对模式串 p 应该从 `j = 2` 处开始继续匹配，主串的 `i` 保持不变
 
 因此，我们建立一个 `next` 数组，`next[0] = 0`，`next[k - 1]` 表示前$k$个字符组成的字符串中，相等的前缀子串和后缀子串的最大长度，当 `s[i] != p[j]` 时，`j = next[j - 1]`。
 
@@ -51,7 +51,7 @@ void BruteForce(string s, string p) {
 
 
 ## 代码
-快速计算`next`数组的代码:
+快速计算`next`数组的代码：
 ```cpp
 void SetNext(vector<int> &next, string needle) {
     int x = 1, now = 0;
@@ -95,4 +95,4 @@ int strStr(string s, string p) {
 ```
 
 ## 参考
-[kmp算法-阮行止](https://www.zhihu.com/question/21923021/answer/1032665486)
+[kmp 算法 - 阮行止](https://www.zhihu.com/question/21923021/answer/1032665486)
