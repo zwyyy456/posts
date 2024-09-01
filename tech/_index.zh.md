@@ -1,4 +1,4 @@
 ---
-title: "文章"
+title: "技术"
 hidemeta: true
 ---
