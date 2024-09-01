@@ -2,7 +2,7 @@
 title: "macOS 配置算法（第四版）的开发环境"
 date: 2023-06-22T17:36:50+08:00
 lastmod: 2023-06-22T17:36:50+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["java", "trick"]
 description: "" #描述

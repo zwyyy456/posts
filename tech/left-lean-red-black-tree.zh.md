@@ -2,7 +2,7 @@
 title: "左倾红黑树（LLRB）"
 date: 2023-06-24T13:36:26+08:00
 lastmod: 2023-06-24T13:36:26+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms"]
 description: "" #描述

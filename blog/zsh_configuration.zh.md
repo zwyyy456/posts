@@ -2,7 +2,7 @@
 title: "Zsh 的简单配置与使用"
 date: 2023-03-23T10:55:08+08:00
 lastmod: 2023-03-23T10:55:08+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["zsh", "tips"]
 description: "" #描述

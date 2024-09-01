@@ -2,7 +2,7 @@
 title: "Neovim 快捷键配置"
 date: 2023-11-05T17:05:51+08:00
 lastmod: 2023-11-05T17:05:51+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["neovim", "geek", "tips"]
 description: "" #描述

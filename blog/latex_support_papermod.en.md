@@ -1,6 +1,7 @@
 ---
 title: "为 PaperMod 主题添加 LaTeX 支持"
 date: 2022-09-26T11:42:46+08:00
+lastmod: 2022-09-26T11:42:46+08:00
 draft: false
 tags: ["hugo", "geek", "tips"]
 categories: ["tutorial"]

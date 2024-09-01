@@ -1,6 +1,7 @@
 ---
 title: "为 papermod 主题添加 Latex 支持"
 date: 2022-09-26T11:42:46+08:00
+lastmod: 2022-09-26T11:42:46+08:00
 draft: false
 tags: ["hugo", "geek", "tips"]
 categories: ["tutorial"]
@@ -50,7 +51,7 @@ showbreadcrumbs: false #顶部显示当前路径
 编辑`config.toml`，添加如下内容
 ```toml
 [params]
-        math = true # 添加latex支持
+        math = true # 添加 latex 支持
 ```
 
 ## Reference

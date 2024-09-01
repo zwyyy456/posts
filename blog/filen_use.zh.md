@@ -2,7 +2,7 @@
 title: "使用 Filen 同步文件夹"
 date: 2023-11-28T15:36:08+08:00
 lastmod: 2023-11-28T15:36:08+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["trick"]
 description: "" #描述

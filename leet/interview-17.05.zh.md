@@ -2,7 +2,7 @@
 title: "面试题 17.05.  字母与数字 (Medium)"
 date: 2023-03-11T15:31:57+08:00
 lastmod: 2023-03-11T15:31:57+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["leetcode"]
 tags: ["daily", "hash table", "prefix sum"]
 description: "" #描述

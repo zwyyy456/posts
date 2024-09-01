@@ -2,7 +2,7 @@
 title: "安卓电视盒子的折腾之旅"
 date: 2024-06-11T22:39:23+08:00
 lastmod: 2024-06-11T22:39:23+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["atv", "fun"]
 description: "" #描述

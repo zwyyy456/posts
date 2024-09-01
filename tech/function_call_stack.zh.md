@@ -2,7 +2,7 @@
 title: "从汇编的角度理解 C/Cpp 的函数调用过程"
 date: 2023-05-01T17:45:58+08:00
 lastmod: 2023-05-01T17:45:58+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["OS"]
 tags: ["Cpp"]
 description: "" #描述

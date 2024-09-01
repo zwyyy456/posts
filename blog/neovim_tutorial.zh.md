@@ -2,7 +2,7 @@
 title: "Neovim 的配置与使用"
 date: 2023-03-17T15:08:52+08:00
 lastmod: 2024-04-15T15:08:52+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["vim", "neovim", "geek", "tips"]
 description: "" #描述

@@ -2,7 +2,7 @@
 title: "数组形式组织的树"
 date: 2023-06-12T13:47:07+08:00
 lastmod: 2023-06-12T13:47:07+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["tree", "data structure and algorithms"]
 description: "" #描述

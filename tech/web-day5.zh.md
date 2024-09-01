@@ -2,7 +2,7 @@
 title: "Web Day 5 添加 Channel 类"
 date: 2023-11-15T15:29:00+08:00
 lastmod: 2023-11-15T15:29:00+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["cpp", "web server"]
 description: "" #描述

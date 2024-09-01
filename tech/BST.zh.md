@@ -2,7 +2,7 @@
 title: "二叉搜索树"
 date: 2023-06-23T15:08:23+08:00
 lastmod: 2023-06-23T15:08:23+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["tree", "data structure and algorithms"]
 description: "" #描述

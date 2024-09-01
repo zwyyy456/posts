@@ -2,7 +2,7 @@
 title: "Nas 预组"
 date: 2023-12-04T23:22:04+08:00
 lastmod: 2023-12-04T23:22:04+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["nas", trick"]
 description: "" #描述

@@ -2,7 +2,7 @@
 title: "vscode 使用 clangd"
 date: 2023-03-23T15:56:21+08:00
 lastmod: 2023-03-23T15:56:21+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["geek", "clangd", "vscode", "tips"]
 description: "" #描述

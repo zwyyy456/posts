@@ -2,7 +2,7 @@
 title: "异常控制流（Exceptional Control Flow, ECF）"
 date: 2023-06-27T15:41:06+08:00
 lastmod: 2023-06-27T15:41:06+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["csapp"]
 description: "" #描述

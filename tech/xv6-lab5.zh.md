@@ -2,7 +2,7 @@
 title: "Xv6 Lab5: lazy page allocation"
 date: 2023-07-15T17:18:30+08:00
 lastmod: 2023-07-15T17:18:30+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["xv6", "os", "lab", "mit"]
 description: "" #描述

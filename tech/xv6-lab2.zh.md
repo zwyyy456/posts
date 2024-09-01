@@ -2,7 +2,7 @@
 title: "Xv6 Lab2: System calls"
 date: 2023-07-01T15:15:38+08:00
 lastmod: 2023-07-01T15:15:38+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["xv6", "os", "lab", "mit"]
 description: "" #描述

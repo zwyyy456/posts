@@ -2,7 +2,7 @@
 title: "solve the problem of downloading assets from github"
 date: 2022-10-13T21:38:19+08:00
 lastmod: 2022-10-13T21:38:19+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: [""]
 tags: [""]
 description: "" #描述

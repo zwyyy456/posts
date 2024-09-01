@@ -2,7 +2,7 @@
 title: "MIT 6.S081 Lec14: File system"
 date: 2023-07-22T19:51:29+08:00
 lastmod: 2023-07-22T19:51:29+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["xv6", "mit", "os"]
 description: "" #描述

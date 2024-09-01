@@ -2,7 +2,7 @@
 title: "VSCode 工作空间（Workspace）指北"
 date: 2024-05-25T10:33:04+08:00
 lastmod: 2024-05-25T10:33:04+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["vscode"]
 description: "" #描述

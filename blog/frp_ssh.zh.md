@@ -2,7 +2,7 @@
 title: "通过 frp 使用 ssh 连接内网服务器"
 date: 2023-04-02T17:41:53+08:00
 lastmod: 2023-04-02T17:41:53+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["geek", "ssh", "tips"]
 description: "" #描述1

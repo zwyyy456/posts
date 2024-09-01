@@ -2,7 +2,7 @@
 title: "MIT 6.S081 Multiprocessors and locking"
 date: 2023-07-18T13:54:16+08:00
 lastmod: 2023-07-18T13:54:16+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["xv6", "mit", "os"]
 description: "" #描述

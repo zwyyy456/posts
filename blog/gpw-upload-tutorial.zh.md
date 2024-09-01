@@ -2,7 +2,7 @@
 title: "简单的 GPW 发种教程"
 date: 2023-12-31T15:38:45+08:00
 lastmod: 2023-12-31T15:38:45+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["pt"]
 description: "" #描述

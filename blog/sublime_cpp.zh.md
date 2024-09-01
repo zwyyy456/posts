@@ -2,7 +2,7 @@
 title: "配置 Sublime Text4 为 C++ 编辑器"
 date: 2023-02-06T09:06:25+08:00
 lastmod: 2023-02-06T09:06:25+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["sublime", "LSP", "tips"]
 description: "" #描述

@@ -2,7 +2,7 @@
 title: "C++ 模板类编译过程中出现“undefined reference to”问题"
 date: 2023-03-14T18:35:39+08:00
 lastmod: 2023-03-14T18:35:39+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["cpp"]
 description: "" #描述

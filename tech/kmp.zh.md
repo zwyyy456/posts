@@ -2,7 +2,7 @@
 title: "kmp 算法"
 date: 2023-03-27T16:45:04+08:00
 lastmod: 2023-03-27T16:45:04+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["kmp", "data structure and algorithms"]
 description: "" #描述

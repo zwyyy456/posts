@@ -2,7 +2,7 @@
 title: "Web Day11：完成线程池以及加入一个简单的测试程序"
 date: 2023-11-18T19:40:26+08:00
 lastmod: 2023-11-18T19:40:26+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["cpp", "web server"]
 description: "" #描述

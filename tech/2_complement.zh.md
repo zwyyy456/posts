@@ -2,7 +2,7 @@
 title: "二进制下的补码、反码、原码——适用于有符号整数"
 date: 2023-05-08T18:40:47+08:00
 lastmod: 2023-05-08T18:40:47+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["csapp"]
 description: "" #描述

@@ -2,7 +2,7 @@
 title: "Mit6.s081 Lec15: xv6 的 logging system"
 date: 2023-07-25T16:48:39+08:00
 lastmod: 2023-07-25T16:48:39+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["xv6", "mit", "os"]
 description: "" #描述

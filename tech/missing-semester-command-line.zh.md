@@ -2,7 +2,7 @@
 title: "计算机教育缺失的一课：命令行环境"
 date: 2024-06-15T15:18:13+08:00
 lastmod: 2024-06-15T15:18:13+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["mit"]
 description: "" #描述

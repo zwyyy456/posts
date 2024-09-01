@@ -2,7 +2,7 @@
 title: "Xv6 Lab11: Mmap"
 date: 2023-08-03T13:53:24+08:00
 lastmod: 2023-08-03T13:53:24+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["xv6", "os", "lab", "mit"]
 description: "" #描述

@@ -2,7 +2,7 @@
 title: "miniconda 基础教程"
 date: 2022-11-11T15:55:04+08:00
 lastmod: 2022-11-11T15:55:04+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["python"]
 description: "" #描述

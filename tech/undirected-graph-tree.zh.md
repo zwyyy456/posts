@@ -2,7 +2,7 @@
 title: "无向图形式组织的树"
 date: 2023-07-18T09:30:57+08:00
 lastmod: 2023-07-18T09:30:57+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["tree", "graph", "data structure and algorithms"]
 description: "" #描述

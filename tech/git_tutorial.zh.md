@@ -2,7 +2,7 @@
 title: "git 使用技巧"
 date: 2023-03-22T09:56:48+08:00
 lastmod: 2023-03-22T09:56:48+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["git", "geek", "utility", "tips"]
 description: "" #描述

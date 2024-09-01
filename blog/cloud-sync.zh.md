@@ -2,7 +2,7 @@
 title: "Mac 与 win 之间的云同步处理"
 date: 2024-01-15T16:02:28+08:00
 lastmod: 2024-01-15T16:02:28+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["git"]
 description: "" #描述

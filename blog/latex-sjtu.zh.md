@@ -2,7 +2,7 @@
 title: "利用 Latex 写毕业论文"
 date: 2024-02-22T20:18:43+08:00
 lastmod: 2024-02-22T20:18:43+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["latex"]
 description: "" #描述
