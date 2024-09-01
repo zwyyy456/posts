@@ -2,7 +2,7 @@
 title: "Exponentiating by Squaring"
 date: 2022-11-19T11:51:31+08:00
 lastmod: 2022-11-19T11:51:31+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authos: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms"]
 description: "" #描述

@@ -2,7 +2,7 @@
 title: "01 背包问题"
 date: 2022-10-01T15:08:30+08:00
 lastmod: 2022-10-01T15:08:30+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authos: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms", "dynamic programming"]
 description: "01 背包问题的笔记与思考" #描述
