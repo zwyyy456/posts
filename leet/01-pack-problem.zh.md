@@ -3,7 +3,7 @@ title: "01 背包问题"
 date: 2022-10-01T15:08:30+08:00
 lastmod: 2022-10-01T15:08:30+08:00 #更新时间
 author: ["zwyyy456"] #作者
-categories: ["notes"]
+categories: ["tech"]
 tags: ["data structure and algorithms", "dynamic programming"]
 description: "01 背包问题的笔记与思考" #描述
 weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序

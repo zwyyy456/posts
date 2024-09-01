@@ -3,7 +3,7 @@ title: "完全背包问题"
 date: 2022-10-03T13:50:44+08:00
 lastmod: 2022-10-03T13:50:44+08:00 #更新时间
 authors: ["zwyyy456"] #作者
-categories: ["notes"]
+categories: ["tech"]
 tags: ["data structure and algorithms", "dynamic programming"]
 description: "UKP" #描述
 weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序

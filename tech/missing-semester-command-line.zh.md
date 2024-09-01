@@ -3,7 +3,7 @@ title: "计算机教育缺失的一课：命令行环境"
 date: 2024-06-15T15:18:13+08:00
 lastmod: 2024-06-15T15:18:13+08:00 #更新时间
 authors: ["zwyyy456"] #作者
-categories: ["notes"]
+categories: ["tech"]
 tags: ["mit"]
 description: "" #描述
 weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序

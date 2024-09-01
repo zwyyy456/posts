@@ -3,7 +3,7 @@ title: "计算机教育缺失的一课：Shell 工具与脚本"
 date: 2024-05-09
 lastmod: 2024-05-11T11:38:39+08:00 #更新时间
 authors: ["zwyyy456"] #作者
-categories: ["notes"]
+categories: ["tech"]
 tags: ["cs"]
 description: "" #描述
 weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序

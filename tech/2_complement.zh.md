@@ -3,7 +3,7 @@ title: "二进制下的补码、反码、原码——适用于有符号整数"
 date: 2023-05-08T18:40:47+08:00
 lastmod: 2023-05-08T18:40:47+08:00 #更新时间
 authors: ["zwyyy456"] #作者
-categories: ["notes"]
+categories: ["tech"]
 tags: ["csapp"]
 description: "" #描述
 weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序

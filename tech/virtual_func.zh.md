@@ -3,7 +3,7 @@ title: "C++ 虚函数与动态绑定"
 date: 2023-04-23T22:59:09+08:00
 lastmod: 2023-04-23T22:59:09+08:00 #更新时间
 authors: ["zwyyy456"] #作者
-categories: ["notes"]
+categories: ["tech"]
 tags: ["cpp"]
 description: "" #描述
 weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
