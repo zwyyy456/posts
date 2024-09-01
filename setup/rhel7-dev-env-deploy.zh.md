@@ -160,7 +160,7 @@ mv cmake-3.30.2.tar.gz $HOME/src
 cd $HOME/src
 tar -xvf cmake-3.30.2.tar.gz
 cd cmake-3.30.2
-./bootstrap --prefix=$HOME/.local/cmake
+./bootstrap --prefix=$HOME/.local/cmake -- -DOPENSSL_ROOT_DIR=$HOME/.local/openssl -DOPENSSL_INCLUDE_DIR=$HOME/.local/openssl/include -DOPENSSL_LIBRARIES=$HOME/.local/openssl/lib
 make -j2
 make install
 ```
@@ -168,4 +168,22 @@ make install
 ### Python
 
 编译安装 Python 3.10 需要用到我们编译安装的 OpenSSL。
+
+### llvm17
+
+执行以下命令编译安装 llvm17，需要使用我们自行编译安装的 gcc。注意编译 llvm 需要 gcc7.4.0+ 和 python3.6+。
+
+```sh
+git clone -b llvmorg-17.0.6 --depth=1 https://github.com/llvm/llvm-project.git
+
+## 设置环境变量
+export CC=$HOME/.local/gcc-11.2/bin/gcc
+export CXX=$HOME/.local/gcc-11.2/bin/g++
+export LD_LIBRARY_PATH=$HOME/.local/gcc-11.2/lib64:$LD_LIBRARY_PATH
+export PATH=$HOME/.local/gcc-11.2/bin:$PATH
+
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$HOME/.local/llvm17 -G "Unix Makefiles" ../llvm
+
 
