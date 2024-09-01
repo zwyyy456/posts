@@ -6,7 +6,7 @@ authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["vim", "neovim", "geek", "tips"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -27,9 +27,9 @@ showbreadcrumbs: false #顶部显示当前路径
 
 值得注意的是，LazyVim 会安装 `nvim-treesitter` 插件，而 `nvim-treesitter` 插件会自动编译安装 C/C++ 等语言的解析器，而编译安装是需要 C/C++ 的运行环境的，对安装了 Command Line Tool 的 Mac 或者 Linux 而言，这一步一般不会存在问题，Windows 则是容易出现问题，我在重装 Windows 系统后尝试过只通过 scoop 安装了 `llvm`，尽管命令行中执行 `clang --version` 是有正常输出的，即 C/C++ 运行环境已经正常安装好了，但是 `nvim-treesitter` 始终无法正常编译解释器，不得已，我又通过 `scoop install mingw` 安装了 `mingw`（gcc），安装好 `mingw` 之后，解释器就能正常被编译安装了，此后执行 `scoop uninstall mingw` 卸载掉 `mingw` 也还是能正常使用。
 
-## keymap配置
+## keymap 配置
 
-**Insert**模式下按下`jk`退出**Insert**模式，将`nvim/lua/config/keymap.lua`中文件内容修改为:
+**Insert**模式下按下`jk`退出**Insert**模式，将`nvim/lua/config/keymap.lua`中文件内容修改为：
 
 ```lua
 local keymap = vim.keymap
@@ -234,10 +234,10 @@ end
 
 如果远程服务器打开了 tmux，并在 tmux 中打开 neovim，那么还需要做一点额外配置，使得 neovim yank 的内容能同步到本地机器的剪贴板。
 
-首先，编辑 `~/.tmux.conf`，追加内容 `set -g allow-passthrough on`，在安装 `osc52` 插件时，配置需要设置为 `tmux_passthrough = true`，对应 “利用 lazy.nvim 安装并管理插件” 部分的 `opts = {tmux_passthrough = true},`。
+首先，编辑 `~/.tmux.conf`，追加内容 `set -g allow-passthrough on`，在安装 `osc52` 插件时，配置需要设置为 `tmux_passthrough = true`，对应“利用 lazy.nvim 安装并管理插件”部分的 `opts = {tmux_passthrough = true},`。
 
 
-## 设置tab-size为4
+## 设置 tab-size 为 4
 修改`~/.config/nvim/lua/config/optionas.lua`，追加内容
 ```lua
 opt.tabstop = 4
@@ -278,9 +278,9 @@ opt.shiftwidth = 4
 
 
 ## 杂项
-`<S-Tab>`已经被lazyvim设置于为`Go to left windows`
+`<S-Tab>`已经被 lazyvim 设置于为`Go to left windows`
 
-见 github 讨论 [切换tab](https://github.com/LazyVim/LazyVim/discussions/332)
+见 github 讨论 [切换 tab](https://github.com/LazyVim/LazyVim/discussions/332)
 
 
 

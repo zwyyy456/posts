@@ -6,7 +6,7 @@ authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["dsu", "data structure and algorithms"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -65,7 +65,7 @@ void Dsu::Unite(size_t x, size_t y) {
 ```
 
 ## 启发式合并
-即将节点较小或者深度较小的树连接到另一棵，这里以按节点数合并的实现作为参考:
+即将节点较小或者深度较小的树连接到另一棵，这里以按节点数合并的实现作为参考：
 ```cpp
 void Unite(size_t x, size_t y) {
     x = find(x), y = find(y);

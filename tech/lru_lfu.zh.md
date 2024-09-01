@@ -6,7 +6,7 @@ authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["data structure and algorithms", "hash table"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -61,7 +61,7 @@ struct List {
         vtail_ = nullptr;
     }
     void Insert(Node *node) {
-        // 双向链表的插入, node 表示待插入结点，插入作为双向链表的尾结点
+        // 双向链表的插入，node 表示待插入结点，插入作为双向链表的尾结点
         node->pre_ = vtail_->pre_;
         vtail_->pre_->next_ = node;
         vtail_->pre_ = node;
@@ -257,5 +257,5 @@ class LFUCache {
 };
 ```
 
-这里还要注意的是，类中 `int` 成员变量，如果没有在构造函数中显式执行初始化，其默认值很可能不是0。
+这里还要注意的是，类中 `int` 成员变量，如果没有在构造函数中显式执行初始化，其默认值很可能不是 0。
 

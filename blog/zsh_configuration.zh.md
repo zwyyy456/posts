@@ -6,7 +6,7 @@ authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["zsh", "tips"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -16,10 +16,10 @@ hidemeta: false # 是否隐藏文章的元信息，如发布日期、作者等
 disableShare: true # 底部不显示分享栏
 showbreadcrumbs: false #顶部显示当前路径
 ---
-## 安装starship
-MacOS下执行`curl -sS https://starship.rs/install.sh | sh`即可，Linux下（如Debian），执行`curl -sS https://starship.rs/install.sh | sh`即可，然后执行`starship preset pure-preset > ~/.config/starship.toml`将预设主题设置为**pure**。
+## 安装 starship
+MacOS 下执行`curl -sS https://starship.rs/install.sh | sh`即可，Linux 下（如 Debian），执行`curl -sS https://starship.rs/install.sh | sh`即可，然后执行`starship preset pure-preset > ~/.config/starship.toml`将预设主题设置为**pure**。
 
-## 安装zinit插件
+## 安装 zinit 插件
 执行`bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"`以自动安装**zinit。
 
 修改`~/.zshrc`为以下内容

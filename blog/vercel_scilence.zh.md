@@ -6,7 +6,7 @@ authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["tips", "geek"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -18,7 +18,7 @@ showbreadcrumbs: false #顶部显示当前路径
 ---
 ## 让 Vercel 部署 GitHub 项目成功时，不再自动发送邮件通知
 
-在`github`项目根目录下新建`vercel.json`，内容为:
+在`github`项目根目录下新建`vercel.json`，内容为：
 ```json
 {
   "github": {

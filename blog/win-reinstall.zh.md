@@ -6,7 +6,7 @@ authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["win11", "dev"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -101,7 +101,7 @@ scoop install j178/leetgo
 
 Neovim 的配置见 [Neovim 的配置与使用](https://blog.zwyyy456.tech/zh/posts/blog/neovim_tutorial/)。
 
-Sublime Text4 的配置见 [配置 Sublime Text4为 C++ 编辑器](https://blog.zwyyy456.tech/zh/posts/blog/sublime_cpp/)。
+Sublime Text4 的配置见 [配置 Sublime Text4 为 C++ 编辑器](https://blog.zwyyy456.tech/zh/posts/blog/sublime_cpp/)。
 
 Wezterm 的配置见 [Wezterm 的配置与使用](https://blog.zwyyy456.tech/zh/posts/blog/wezterm_tutorial/)
 
@@ -132,7 +132,7 @@ Microsoft Store 中可以安装 Debian，安装好 Debian 之后要先在 Window
 
 Microsoft Store 中可以免费安装 Pixpin 和 OneCommander，前者可以理解为 Snipaste 的替代，后者则是自带文件管理器的上位替代。
 
-Edge 浏览器注意关闭安全 DNS，如下图所示:
+Edge 浏览器注意关闭安全 DNS，如下图所示：
 
 ![](https://pic-upyun.zwyyy456.tech/picgo/20240417220840.png)
 

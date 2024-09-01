@@ -6,7 +6,7 @@ authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["xv6", "mit", "os"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -48,7 +48,7 @@ QEMU 会将设备接口以内存映射的控制寄存器暴露给系统软件，
 trampoline page 是 r-x 的，kernel stack 是 rw- 的。
 
 从图上来看，其实只有 kernel data 和 kernel text 是直接映射的。
-　　　
+   
 ## Code: creating an address space 
 
 关于操作 page table 和地址空间的代码主要位于 `kernel/vm.c` 中。

@@ -1,7 +1,8 @@
 ---
 title: "Math_test"
 date: 2022-09-26T11:40:26+08:00
-lastmod: 2022-09-26T11:40:26+08:00
+categories: ["notes"]
+tags: ["mit", "git"]
 draft: 
 ---
 
@@ -10,3 +11,5 @@ draft:
 $a_b$
 $$a_b + c_d$$
 
+
+aaa

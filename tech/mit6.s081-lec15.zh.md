@@ -6,7 +6,7 @@ authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["xv6", "mit", "os"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -22,7 +22,7 @@ file system 设计的一大重要问题就是 **crash recovery**。这是因为�
 
 > For example, suppose a crash occurs during file truncation (setting the length of a file to zero and freeing its content blocks). Depending on the order of the disk writes, the crash may either **leave an inode with a reference to a content block that is marked free**, or it may **leave an allocated but unreferenced content block**.
 
-前者当系统重启之后,可能导致一个磁盘 block 被两个文件所对应，这是一个很严重的问题。 
+前者当系统重启之后，可能导致一个磁盘 block 被两个文件所对应，这是一个很严重的问题。 
 
 xv6 的解决方法是使用 logging（日志）。xv6 的系统调用不会直接向 on-disk file system data structure（例如 buffer 以及磁盘 block？）写入，而是将它所有希望执行的**磁盘写入**的**描述**放在磁盘的某个 log 中，once the system call has logged all of its writes, it writes a special **commit** record to the disk indicating that the log contains a complete operation（这里不知道怎么翻译好了）。此时，系统调用才将 disk write 应用到 on-disk file system data structure。当所有的写入操作完成后，系统调用会清除磁盘上的 log。
 
@@ -34,7 +34,7 @@ log 使得这些写入操作对 crash 来说是原子的，要么都没写入，
 
 ## Log design
 
-log 存在于磁盘的 superblock 中，它由一个 header block 和后面的一系列 updated block copies（更新块的副本，又称 logged blocks） 组成。header block 包含一个扇区号（sector index）的数组，每个 sector index 对应一个 logged block，还包含着 log blocks 的数量。header block 中的计数要么为 $0$，说明 log 中不存在 transaction，要么不为 $0$，说明 log 包含一个完整的已、已提交的 transaction，并包含指定数量的 logged blocks。
+log 存在于磁盘的 superblock 中，它由一个 header block 和后面的一系列 updated block copies（更新块的副本，又称 logged blocks）组成。header block 包含一个扇区号（sector index）的数组，每个 sector index 对应一个 logged block，还包含着 log blocks 的数量。header block 中的计数要么为 $0$，说明 log 中不存在 transaction，要么不为 $0$，说明 log 包含一个完整的已、已提交的 transaction，并包含指定数量的 logged blocks。
 
 xv6 在 transaction 提交时，向 header block 写入数据，在将 logged blocks 复制到 file system 之后，将 header block 的计数置为 $0$。
 
@@ -53,7 +53,7 @@ xv6 在磁盘上标识出了一段固定大小的空间用来存放 log。因此
 
 ![rJgukCV9DnRGfaE](https://pic-upyun.zwyyy456.tech/smms/2023-12-26-065958.png)
 
-`begin_op` wait until the logging system is not currently commiting, and until there is enough unreserved log space to hold the writes from this call. `log.outstanding` 会统计预订了 log space 的系统调用的数量，被预订的总空间就是 `log.outstanding` 乘上 `MAXOPBLOCKS`。递增 `log.outstanding` 会预订 log space，并且防止在此系统调用期间发生 commit。 xv6 保守地预计每个系统调用都会写入 `MAXOPBLOCKS` 个不同的 block。
+`begin_op` wait until the logging system is not currently commiting, and until there is enough unreserved log space to hold the writes from this call. `log.outstanding` 会统计预订了 log space 的系统调用的数量，被预订的总空间就是 `log.outstanding` 乘上 `MAXOPBLOCKS`。递增 `log.outstanding` 会预订 log space，并且防止在此系统调用期间发生 commit。xv6 保守地预计每个系统调用都会写入 `MAXOPBLOCKS` 个不同的 block。
 
 > 事实上 等 `end_op` 完成 `commit()` 之后，`begin_op` 才会被唤醒，此时不仅是 log 被提交，更新也已经被应用到了磁盘。
 
@@ -86,7 +86,7 @@ void log_write(struct buf *b) {
 }
 ```
 
-在 commit 之前，block 必须要缓存在 buffer 上， 这是因为 buffer 唯一地记录着我们对这个 block 的修改；只有在 commit 之后，才可以将 buffer 写入磁盘上的位置；同一 transaction 的假设要读取这个 block，那么它必须能看到对这个 buffer 的修改。`log_write` 会注意到一个 transaction 中，多次写入同一个 block 的情况，如果是写入同一个 block，那么就不会添加新 block 到 log 中，而是在 log 中为该 block 分配相同的槽位。这种优化通常被称为 **absorption（合并）**，这样的话，从 buffer 写入到 log 的槽位只会发生一次，即使写入 buffer 发生了很多次。
+在 commit 之前，block 必须要缓存在 buffer 上，这是因为 buffer 唯一地记录着我们对这个 block 的修改；只有在 commit 之后，才可以将 buffer 写入磁盘上的位置；同一 transaction 的假设要读取这个 block，那么它必须能看到对这个 buffer 的修改。`log_write` 会注意到一个 transaction 中，多次写入同一个 block 的情况，如果是写入同一个 block，那么就不会添加新 block 到 log 中，而是在 log 中为该 block 分配相同的槽位。这种优化通常被称为 **absorption（合并）**，这样的话，从 buffer 写入到 log 的槽位只会发生一次，即使写入 buffer 发生了很多次。
 
 `end_op` 首先会减少未完成的系统调用的计数（说明有系统调用完成了），如果计数被递减到了 $0$，它就会通过调用 `commit()` 来提交当前的 transaction。这个过程分为四个阶段：
 

@@ -6,7 +6,7 @@ authors: ["zwyyy456"] #作者
 categories: ["tutorial"]
 tags: ["latex"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -242,7 +242,7 @@ $\lim\limits_{x = 0}$
 
 ## 参考
 
-[Latex编译（Miktex与texlive异同）](https://zhuanlan.zhihu.com/p/104464775)
+[Latex 编译（Miktex 与 texlive 异同）](https://zhuanlan.zhihu.com/p/104464775)
 
 [SJTUThesis 说明](https://github.com/sjtug/SJTUThesis/wiki)
 

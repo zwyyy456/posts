@@ -1,11 +1,11 @@
 ---
-title: "monotone stack"
-date: 2022-11-11T15:55:04+08:00
-lastmod: 2022-11-11T15:55:04+08:00 #更新时间
-authors: ["zwyyy456"] #作者
+title: "01 背包问题"
+date: 2022-10-01T15:08:30+08:00
+lastmod: 2022-10-01T15:08:30+08:00 #更新时间
+author: ["zwyyy456"] #作者
 categories: ["notes"]
-tags: ["data structure and algorithms", "monotone stack"]
-description: "" #描述
+tags: ["data structure and algorithms", "dynamic programming"]
+description: "01 背包问题的笔记与思考" #描述
 weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
@@ -16,24 +16,24 @@ hidemeta: false # 是否隐藏文章的元信息，如发布日期、作者等
 disableShare: true # 底部不显示分享栏
 showbreadcrumbs: false #顶部显示当前路径
 ---
-## Description
-### brief
-Monotone stack is a stack whose elements(from top to bottom) are (strictly) monotonically increasing or decreasing.
+## 问题描述
+[01 背包问题](https://www.acwing.com/problem/content/2/)
+有$N$件物品和一个容量是$V$的背包，每件物品只能使用一次。
 
-*Monotone increasing stack*: the element which is smaller than the element in the top can be pushed into stack, else we will pop the element in the top, until the stack is empty or the element is smaller than the element in the top, then we push the element into the stack. This data structure is usually used for problems to find first element that is larger than certain element.
+第$i$件物品的体积是$v_i$，价值是$w_i$，求解将哪些物品装入背包，可使这些物品总体积不超过背包容量，并且总价值最大。
 
-*Monotone decreasing stack*: is the opposite of a monotonically increasing stack, used for problems to find first element that is smaller than certain element.
+## 解题思路
+动态规划的经典例题，首先考虑`dp[i][j]`的含义，这里`i`表示只考虑前`i`个物品 (`i`从$1\sim N$)，`dp[i][j]`表示总体积为`j`的情况下，考虑前`i`个物品时，背包里的物品的最大价值。
 
-### how to judge
-Monotonically increasing/decreasing stacks are generally determined by the order in which they exit the stack
+可以分成两种情况考虑`dp[i][j]`的递推关系：
+- 第`i`个物品不在背包中时，`dp[i][j] = dp[i - 1][j]`
+    - 此时只有前`i - 1`个物品，背包中物品体积仍为`j`。
+- 第`i`个物品在背包中时，`dp[i][j] = dp[i - 1][j - v[i]] + w[i]`
+    - 前`i - 1`个物品的体积为`j - v[i]`。
 
-### the sentry tips
-Sometimes, if all the elements in the array is needed, that is: all the elements in the stack will be popped. It's very likely that the border will not be passed because it is not considered. So we can use the *sentinel method*.
+初始化，显然`dp[0][0] = 0`。
 
-For example, adding a `-1` at the end of {1, 3, 4, 5, 2, 9, 6} as a sentinel, it becomes {1, 3, 4, 5, 2, 9, 6, -1}, a trick that simplifies the code logic.
-
-## Examples
-
+根据递推关系和初始化条件写`for`循环遍历即可。
 
 ## 代码
 ```cpp

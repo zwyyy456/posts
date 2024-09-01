@@ -6,7 +6,7 @@ authors: ["zwyyy456"] #作者
 categories: ["notes"]
 tags: ["tutorial", "cpp"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -17,10 +17,10 @@ disableShare: true # 底部不显示分享栏
 showbreadcrumbs: false #顶部显示当前路径
 ---
 ## 介绍
-CMake是个一个开源的跨平台自动化建构系统，用来管理软件建置的程序，并不依赖于某特定编译器，并可支持多层目录、多个应用程序与多个库。 它用配置文件控制建构过程（build process）的方式和Unix的make相似，只是CMake的配置文件取名为`CMakeLists.txt`。CMake并不直接建构出最终的软件，而是产生标准的建构档（如Unix的`Makefile`或Windows Visual C++的`projects/workspaces`），然后再依一般的建构方式使用。
+CMake 是个一个开源的跨平台自动化建构系统，用来管理软件建置的程序，并不依赖于某特定编译器，并可支持多层目录、多个应用程序与多个库。它用配置文件控制建构过程（build process）的方式和 Unix 的 make 相似，只是 CMake 的配置文件取名为`CMakeLists.txt`。CMake 并不直接建构出最终的软件，而是产生标准的建构档（如 Unix 的`Makefile`或 Windows Visual C++ 的`projects/workspaces`），然后再依一般的建构方式使用。
 
 ## CmakeLists.txt
-一个简单的`CmakeLists.txt`示例如下:
+一个简单的`CmakeLists.txt`示例如下：
 ```
 # 指定最小 CMake 版本要求
 cmake_minimum_required(VERSION 3.9)
@@ -52,7 +52,7 @@ add_executable(answer main.cpp answer.cpp)
 
 `cmake --build build`是执行构建，生成可执行文件，`build`指的是上一步`-B`参数指定的文件夹。
 
-## 分离库文件情形下的CMakeLists.txt
+## 分离库文件情形下的 CMakeLists.txt
 ```cmake
 cmake_minimum_required(VERSION 3.9)
 project(answer)
@@ -67,7 +67,7 @@ target_link_libraries(answer libanswer)
 ```
 
 ## 子目录设置
-我们考虑将answer相关的头文件和源文件都放入到`answer`目录下，则在`CmakeLists.txt`中要做对应修改，使`cmake`会检索对应目录下的文件。
+我们考虑将 answer 相关的头文件和源文件都放入到`answer`目录下，则在`CmakeLists.txt`中要做对应修改，使`cmake`会检索对应目录下的文件。
 
 ![目录结构](https://pic-upyun.zwyyy456.tech/smms/2023-12-26-065845.png)
 
@@ -114,7 +114,7 @@ PUBLIC 标志使得 头文件接口会被传递给依赖 libanswer 库的文件
 target_include_directories(libanswer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 ```
 
-## 使用系统安装的第三方库，以curl为例
+## 使用系统安装的第三方库，以 curl 为例
 ```cmake
 #[[
 find_package 用于在系统中寻找已经安装的第三方库的头文件和库文件
