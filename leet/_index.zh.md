@@ -1,4 +1,0 @@
----
-title: "LeetCode"
-hidemeta: true
----
