@@ -30,7 +30,7 @@ isCJKLanguage: true
 
 ### 强平中的出入金提醒
 
-对强平单报单到成交这个过程中，如果发生了出入金，就是检查发生了出入金的账户是否存在于 `m_ForceClosingInvSet` 中。出入金的处理在 `TradeTriggered` 的 `case FID_UstpInvestorAccountDeposit`中，会调用 `CheckForceClosingTodayInout` 来检查强平报单后是否发生出入金，如果发生了，会往 `AppendRemindMsgToFlow` 中写流，以发出提醒。
+对强平单报单到成交这个过程中，如果发生了出入金，就是检查发生了出入金的账户是否存在于 `m_ForceClosingInvSet` 中。出入金的处理在 `TradeTriggered` 的 `case FID_UstpInvestorAccountDeposit` 中，会调用 `CheckForceClosingTodayInout` 来检查强平报单后是否发生出入金，如果发生了，会往 `AppendRemindMsgToFlow` 中写流，以发出提醒。
 
 注意，**风控终端登录的用户要有管理该投资者的权限**，这样才能收到提醒。
 
@@ -39,7 +39,7 @@ isCJKLanguage: true
 当发生预埋强平单撤回时，流程与报单类似，由 `RMS_TID_ReqRiskOrderAction` 到 `RMS_TID_ReqParkedOrderAction` 到 `RiskApiMgr`，再报给交易，交易返回一个 response，`RiskApiMgr` 收到后，向流中发送 `RSM_TID_RspParkedOrderAction` package，会调用 `UpdateForceClosingInvByParkedRsp`，真正的实现位于 `AutoRemindHandler.cpp` 中，它会先将强平单状态更新为 `RmsFCOS_Canceled`，表示已经撤销，然后通过 `SearchingQueueingForceCloseOrder` 判断是否可以从 `m_ForceClosingInvSet` 移除用户，最后移除投资者。
 
 * [ ] 个人猜测，点击一次 `强平报单`，尽管会有三个 `ReqRiskOrderInsert` 的数据包，但也许它们的 `FrontID`、`SessionID` 应该是一样的？
-* [ ] 为什么要检查强平下单序号 `batchIter->second` 和发过来的数据包转换成 `CRmsForceCloseOrderField`类型后，其 `BatchNo` 字段结果是否相等？
+* [ ] 为什么要检查强平下单序号 `batchIter->second` 和发过来的数据包转换成 `CRmsForceCloseOrderField` 类型后，其 `BatchNo` 字段结果是否相等？
 
 `BatchNo` 和 `ReqForceCloseCalc` 中的 `SequnceNum` 应该是一个意思，都是表示生成的推荐强平单列表左侧的序号。
 
@@ -59,7 +59,7 @@ isCJKLanguage: true
 
 之前是不是把投资者编号弄错了？
 
-出入金的提醒是都会有的吗？  注意 `AppendMsgToFlow` 中的 `pMsgVec`中的 userid 是 risk3 还是 risk1
+出入金的提醒是都会有的吗？  注意 `AppendMsgToFlow` 中的 `pMsgVec` 中的 userid 是 risk3 还是 risk1
 
 出入金提醒，最后检查出来发现是 Investor 与 User 的权限问题，本来就有这个检测的逻辑了。
 
@@ -96,9 +96,9 @@ TDSS 进程负责数据同步，从结算、帐户那里的数据同步到 sync 
 
 ‍
 
-## 风险通知
+## <span data-type="text" id="">风险通知</span>
 
-​`StandardProtoEngine.cpp`​ 中，`OnRequest`​ 的 `case RMS_TID_SendNotify`​，将 Json 包转换为 Xtp，然后传递给 `riskapimgr`​，`CRiskApiMgr::HandleBSMessage`​会将  `package`​ 转换格式转发给交易，交易处理完成后，发送 Ustp pacakge，`riskapimgr`​通过 CallBack 中的 `CRiskSpi::OnRspSendRiskNotify`​函数处理 Ustp package, 调用 `CRiskApiCallback::OnRspSendRiskNotify`​，该函数调用 `CRiskApiCallback::AppendData`​，会往流中发送 RspSendNotify 的 Xtp package，stdengine 接收到流里的这个包，再发送给网页。
+​`StandardProtoEngine.cpp`​ 中，`OnRequest`​ 的 `case RMS_TID_SendNotify`​，将 Json 包转换为 Xtp，然后传递给 `riskapimgr`​，`CRiskApiMgr::HandleBSMessage` ​会将  `package`​ 转换格式转发给交易，交易处理完成后，发送 Ustp pacakge，`riskapimgr` ​通过 CallBack 中的 `CRiskSpi::OnRspSendRiskNotify` ​函数处理 Ustp package, 调用 `CRiskApiCallback::OnRspSendRiskNotify`​，该函数调用 `CRiskApiCallback::AppendData`​，会往流中发送 RspSendNotify 的 Xtp package，stdengine 接收到流里的这个包，再发送给网页。
 
 * [ ] 哪个函数调用的 ProtoEngine 的 `OnRequest`​？
 
@@ -108,7 +108,7 @@ TDSS 进程负责数据同步，从结算、帐户那里的数据同步到 sync 
 
 stdfront 接收网页端的消息，是通过流吗？
 
-## 自动风险通知
+## <span data-type="text" id="">自动风险通知</span>
 
 自动风险通知，可以在 `serviceImpl/tradeTriggered/autoNotify/AutoNotifyHandler.cpp`​ 中找到，具体函数应该是 `CheckPositionInitNotify()`​，当前该函数只会检查投资者是否由于期权即将到期而需要自动通知。
 
