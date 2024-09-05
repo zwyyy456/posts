@@ -2,11 +2,11 @@
 title: "ELF 文件结构分析"
 date: 2023-05-28T15:59:11+08:00
 lastmod: 2023-05-28T15:59:11+08:00 #更新时间
-author: ["zwyyy456"] #作者
-categories: ["notes"]
+authors: ["zwyyy456"] #作者
+categories: ["tech"]
 tags: ["csapp"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -186,7 +186,7 @@ typedef struct
 
 第三行 `00000020` 前 8 个字节为 `e_phoff`，表示文件中 **Program Header Table** 的偏移量，对 **Relocatable object file** 来说无意义，为 0；后 8 个字节为 `e_shoff`，注意是小端机，其值为 `0x228`，说明 sht 的偏移量为 `0x228`（也可以认为从 `0x228` 处起为 sht）。
 
-第四行 `00000040` 前 4 个字节为 `e_flags`，我们不关心；5、6 字节为 `e_ehsize`，为 `0x40`，说明 ELF Header 占据大小为 40 字节；7、8 字节为 `e_phentsize`，为每个 Program header table entry 占据的大小，由于是 **Relocatable object file**，这里为 0；9、10  字节为 Program header table entry 的个数，也为0；11、12 字节为 **sht entry** 的大小，为 `0x40`，即 64 字节；13、14 字节为 **sht entry** 的个数，为 `0x0b`；最后两个字节为 `e_shstrndx`，值为 `0xa`，指示了节名称字符串表在 **sht** 中的位置。
+第四行 `00000040` 前 4 个字节为 `e_flags`，我们不关心；5、6 字节为 `e_ehsize`，为 `0x40`，说明 ELF Header 占据大小为 40 字节；7、8 字节为 `e_phentsize`，为每个 Program header table entry 占据的大小，由于是 **Relocatable object file**，这里为 0；9、10  字节为 Program header table entry 的个数，也为 0；11、12 字节为 **sht entry** 的大小，为 `0x40`，即 64 字节；13、14 字节为 **sht entry** 的个数，为 `0x0b`；最后两个字节为 `e_shstrndx`，值为 `0xa`，指示了节名称字符串表在 **sht** 中的位置。
 
 到这里，前四行的内容即为 **ELF Header** 的所有内容，我们已经可以计算出该 ELF 格式文件的大小了，为
 $size = e\_shoff + e\_shentsize * e\_shnum = \texttt{0x228} + \texttt{0x40} * \texttt{0x0b} = \texttt{0x4e8}$，`elf.txt` 文件的最后一行正好是 `0x4e8`。
@@ -295,7 +295,7 @@ Symbol table '.symtab' contains 7 entries:
 输出与计算结果一致。
 
 ## 参考
-[计算机那些事(4)——ELF文件结构](http://chuquan.me/2018/05/21/elf-introduce/)
+[计算机那些事 (4)——ELF 文件结构](http://chuquan.me/2018/05/21/elf-introduce/)
 
 [CSAPP](https://csapp.cs.cmu.edu/)
 

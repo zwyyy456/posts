@@ -2,11 +2,11 @@
 title: "git 使用技巧"
 date: 2023-03-22T09:56:48+08:00
 lastmod: 2023-03-22T09:56:48+08:00 #更新时间
-author: ["zwyyy456"] #作者
-categories: ["tutorial"]
+authors: ["zwyyy456"] #作者
+categories: ["setup"]
 tags: ["git", "geek", "utility", "tips"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -22,7 +22,7 @@ git config --global core.editor vim
 ```
 
 ## 问题`fatal: in unpopulated submodule 'xxx'`的解决
-出现这个问题的原因clone的别人的项目之后，删除项目里的`.git`文件就直接添加到了自己的版本控制里面，解决方案，执行
+出现这个问题的原因 clone 的别人的项目之后，删除项目里的`.git`文件就直接添加到了自己的版本控制里面，解决方案，执行
 `git rm --cached . -rf`，再添加文件和提交。
 
 ## "merge conflict" 解决

@@ -2,8 +2,8 @@
 title: "计算机教育缺失的一课：Git"
 date: 2024-06-16
 lastmod: 2024-06-18 #更新时间
-author: ["zwyyy456"] #作
-categories: ["notes"]
+authors: ["zwyyy456"] #作
+categories: ["tech"]
 tags: ["mit", "git"]
 description: "" #描述
 weight: # 输入 1 可以顶置文章，默认按时间排序

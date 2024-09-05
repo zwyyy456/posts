@@ -2,11 +2,11 @@
 title: "miniconda 基础教程"
 date: 2022-11-11T15:55:04+08:00
 lastmod: 2022-11-11T15:55:04+08:00 #更新时间
-author: ["zwyyy456"] #作者
-categories: ["notes"]
+authors: ["zwyyy456"] #作者
+categories: ["tech"]
 tags: ["python"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -16,11 +16,11 @@ hidemeta: false # 是否隐藏文章的元信息，如发布日期、作者等
 disableShare: true # 底部不显示分享栏
 showbreadcrumbs: false #顶部显示当前路径
 ---
-## 创建python虚拟环境
-安装python指定环境
+## 创建 python 虚拟环境
+安装 python 指定环境
 `conda create -n zwyb python=3.9`
 
-安装python指定环境的时候安装相应的包
+安装 python 指定环境的时候安装相应的包
 `conda create -n zwyb python=3.9 pandas`
 
 进入指定的环境
@@ -58,7 +58,7 @@ custom_channels:
 更换`pip`源，执行
 `pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple`
 
-## 关闭启动终端后自动进入conda环境
+## 关闭启动终端后自动进入 conda 环境
 `conda config --set auto_activate_base false`
 
 

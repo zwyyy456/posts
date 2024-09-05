@@ -2,11 +2,11 @@
 title: "MIT 6.s081 实验环境搭建"
 date: 2023-06-28T15:45:16+08:00
 lastmod: 2023-06-28T15:45:16+08:00 #更新时间
-author: ["zwyyy456"] #作者
-categories: ["tutorial"]
+authors: ["zwyyy456"] #作者
+categories: ["setup"]
 tags: ["trick"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -20,7 +20,7 @@ showbreadcrumbs: false #顶部显示当前路径
 
 ### 准备工作
 
-Linux 系统，我是在实验室配的主机上装了 Debian Bookworm，然后mac 通过 ssh 连接上去进行操作，宿舍里则是使用的 wsl2，里面的发行版也是 Debian Bookworm。
+Linux 系统，我是在实验室配的主机上装了 Debian Bookworm，然后 mac 通过 ssh 连接上去进行操作，宿舍里则是使用的 wsl2，里面的发行版也是 Debian Bookworm。
 
 ### 开始配置
 
@@ -45,7 +45,7 @@ $ sudo apt-get install git build-essential gdb-multiarch qemu-system-misc gcc-ri
 
 ### 开始调试
 
-这里会用到 tmux 的功能（非必需），在 `util` 分支下的 `~/Documents/code/mit/xv6-labs-2021` 目录下，执行 `make qemu-gdb`， 然后先按 `ctrl+b` 再按 `%` 键，在 iterm2 的右侧创建一个新 panel，如图
+这里会用到 tmux 的功能（非必需），在 `util` 分支下的 `~/Documents/code/mit/xv6-labs-2021` 目录下，执行 `make qemu-gdb`，然后先按 `ctrl+b` 再按 `%` 键，在 iterm2 的右侧创建一个新 panel，如图
 
 ![4jr1zliCEksJax2](https://pic-upyun.zwyyy456.tech/smms/2023-12-26-070026.png)
 

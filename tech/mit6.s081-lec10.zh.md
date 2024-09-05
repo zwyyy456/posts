@@ -2,11 +2,11 @@
 title: "MIT 6.S081 Multiprocessors and locking"
 date: 2023-07-18T13:54:16+08:00
 lastmod: 2023-07-18T13:54:16+08:00 #更新时间
-author: ["zwyyy456"] #作者
-categories: ["notes"]
+authors: ["zwyyy456"] #作者
+categories: ["tech"]
 tags: ["xv6", "mit", "os"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -71,7 +71,7 @@ void acquire(struct spinlock *lk) {
 
 多核处理器一般会提供原子指令保证这两条语句原子化地执行，在 riscv 中，有 `amoswap r, a`。该指令读取地址 `a` 处的值，记为 `tmp`，然后将寄存器 r 中的值写入 `a`，再将 `tmp` 的值写入寄存器 r。该指令实际上就是原子地执行交换地址 `a` 和寄存器 `r` 处的值。
 
-所以，`acquire` 的实现要想不出错，就应该执行原子地交换 `val`（值为 $1$） 与 `l->locked` 的值，然后检查 `val` 的值，如果是 $0$，就说明获取到了锁，否则说明没有获取到，并且执行交换后，`l->locked` 一定是 $1$。由于执行原子交换，也不可能存在两个 cpu 同时检查到 `val` 为 $0$ 的情况。
+所以，`acquire` 的实现要想不出错，就应该执行原子地交换 `val`（值为 $1$）与 `l->locked` 的值，然后检查 `val` 的值，如果是 $0$，就说明获取到了锁，否则说明没有获取到，并且执行交换后，`l->locked` 一定是 $1$。由于执行原子交换，也不可能存在两个 cpu 同时检查到 `val` 为 $0$ 的情况。
 
 ![ZfPwFynJepvqgQh](https://pic-upyun.zwyyy456.tech/smms/2023-12-26-070009.png)
 
@@ -83,7 +83,7 @@ xv6 的 `release` 函数调用 `__sync_lock_release(&lk->lock)`，该函数执�
 
 为什么不能使用一个普通的写入语句将 `lk->locked` 的值写为 $0$ 呢？这是因为：普通的赋值语句，riscv 中对应的汇编语句是 `store`，而 `store` 本身并不是原子的（可能导致缓存一致性失效？，这里不使用原子指令的副作用感觉不是很清晰 TODO(zwyyy)）。
 
-> 由于每个 cpu 都有自己的 cache，将内存中的某个值写为 $0$，可能要经过先将 $cache$ 中的对应值写为 $0$，再写回内存的过程， 因此 store 指令不是原子的。
+> 由于每个 cpu 都有自己的 cache，将内存中的某个值写为 $0$，可能要经过先将 $cache$ 中的对应值写为 $0$，再写回内存的过程，因此 store 指令不是原子的。
 
 编译器在编译代码时，可能会重排指令以获取更好的性能，例如：
 
@@ -93,7 +93,7 @@ acquire(&lock);
 release(&lock);
 ```
 
-编译器可能重排指令导致 `++i` 语句优先于 `acquire` 指令，这就违背了我们的初衷。 xv6 的源码中的 `acquire` 函数的实现如下：
+编译器可能重排指令导致 `++i` 语句优先于 `acquire` 指令，这就违背了我们的初衷。xv6 的源码中的 `acquire` 函数的实现如下：
 
 ```c
 void acquire(struct spinlock *lk) {
@@ -168,7 +168,7 @@ re-entrant locks 允许锁被**同一个进程**重复持有，又称为 **recur
 
 spinlock 与 interrupt 的相互作用可能是非常危险的。假设 `sys_sleep` 持有了 `tickslock`，然后 cpu 被计时器中断打断，`clockintr` 会尝试获取 `tickslock`，然而由于 `tickslock` 已经被 `sys_sleep` 持有，那么 `clockintr` 会一直等待 `sys_spleep` 释放锁，然而在 `clockintr` return 之前，`sys_sleep` 是不会继续执行的，这就导致了死锁。
 
-为了避免这一情况，如果 interrupt handler 需要使用 spinlock，那么当中断 enable 的时候，该 spinlock 绝不能被 cpu 持有。而 xv6更保守，在申请持有锁的时候，会 disable interrupt on that CPU。（注意这里只关闭同一个 cpu 的中断）
+为了避免这一情况，如果 interrupt handler 需要使用 spinlock，那么当中断 enable 的时候，该 spinlock 绝不能被 cpu 持有。而 xv6 更保守，在申请持有锁的时候，会 disable interrupt on that CPU。（注意这里只关闭同一个 cpu 的中断）
 
 ## Sleep locks
 

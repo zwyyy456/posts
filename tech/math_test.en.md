@@ -1,7 +1,8 @@
 ---
 title: "Math_test"
 date: 2022-09-26T11:40:26+08:00
-categories: ["notes"]
+lastmod: 2022-09-26T11:40:26+08:00
+categories: ["tech"]
 tags: ["mit", "git"]
 draft: 
 ---

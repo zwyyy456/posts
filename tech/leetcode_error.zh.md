@@ -2,11 +2,11 @@
 title: "Leetcode 常见报错的原因分析"
 date: 2023-03-01T19:02:35+08:00
 lastmod: 2023-03-01T19:02:35+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: ["leetcode"]
 tags: ["attention", "data structure and algorithms"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -16,7 +16,7 @@ hidemeta: false # 是否隐藏文章的元信息，如发布日期、作者等
 disableShare: true # 底部不显示分享栏
 showbreadcrumbs: false #顶部显示当前路径
 ---
-## 问题1
+## 问题 1
 ### 问题描述
 `Line 522: Char 69: runtime error: applying non-zero offset 18446744073709551615 to null pointer (basic_string.h)`
 

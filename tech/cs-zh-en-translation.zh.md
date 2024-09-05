@@ -2,11 +2,11 @@
 title: "计算机常用术语中英文对比"
 date: 2024-06-15T16:19:53+08:00
 lastmod: 2024-06-15T16:19:53+08:00 #更新时间
-author: ["zwyyy456"] #作者
-categories: ["notes"]
+authors: ["zwyyy456"] #作者
+categories: ["tech"]
 tags: ["cs"]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
@@ -24,7 +24,7 @@ showbreadcrumbs: false #顶部显示当前路径
 ## 术语列表
 
 
-| 中文版本 | 英文版本| 个人理解 |
+| 中文版本 | 英文版本 | 个人理解 |
 | --- | --- | :--- |
 | 快照 | snapshot | 在某个特定时刻，对系统、数据或者文件的状态进行捕捉与记录从而生成的副本，功能上类似备份 |
 | 会话 | session | 一段时间内，用户与系统之间的交互或者连接状态 |

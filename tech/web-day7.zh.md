@@ -2,11 +2,11 @@
 title: "Web Day7：为服务器添加一个 Acceptor"
 date: 2023-11-16T10:55:51+08:00
 lastmod: 2023-11-16T10:55:51+08:00 #更新时间
-author: ["zwyyy456"] #作者
+authors: ["zwyyy456"] #作者
 categories: [""]
 tags: [""]
 description: "" #描述
-weight: # 输入1可以顶置文章，用来给文章展示排序，不填就默认按时间排序
+weight: # 输入 1 可以顶置文章，用来给文章展示排序，不填就默认按时间排序
 slug: ""
 draft: false # 是否为草稿
 comments: false #是否展示评论
