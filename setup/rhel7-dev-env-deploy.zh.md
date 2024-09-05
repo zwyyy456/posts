@@ -118,6 +118,37 @@ cd openssl-3.3.1
 make -j$(nproc)
 make install
 
+export PKG_CONFIG_PATH=$HOME/.local/openssl/lib64/pkgconfig:$PKG_CONFIG_PATH # 配置 pkg-config 路径
+
+## 安装模块，实际上由于前面安装了 perl-devel，故不需要了
+cd $HOME/src
+wget https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302201.tar.gz
+tar -xvf Test-Simple-1.302201.tar.gz
+cd Test-Simple-1.302201
+
+### 安装 ExtUtils::MakeMaker 模块，
+cd $HOME/src
+wget https://cpan.metacpan.org/authors/id/B/BI/BINGOS/ExtUtils-MakeMaker-7.70.tar.gz
+tar -xvf ExtUtils-MakeMaker-7.70.tar.gz
+cd ExtUtils-MakeMaker-7.70
+perl Makefile.PL PREFIX=$HOME/.local/perl5
+make
+make test
+make install
+
+## 设置环境变量
+echo 'export PERL5LIB=$HOME/.local/perl5/share/perl5:$PERL5LIB' >> ~/.bashrc
+
+wget https://cpan.metacpan.org/authors/id/E/EX/EXODIST/Test-Simple-1.302201.tar.gz
+wget https://cpan.metacpan.org/authors/id/B/BI/BINGOS/IPC-Cmd-1.04.tar.gz
+wget https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Params-Check-0.38.tar.gz
+wget https://cpan.metacpan.org/authors/id/J/JE/JESSE/Locale-Maketext-Simple-0.21.tar.gz
+wget https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Module-Load-Conditional-0.74.tar.gz
+wget https://cpan.metacpan.org/authors/id/B/BI/BINGOS/Module-Load-0.36.tar.gz
+wget https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-ParseXS-3.51.tar.gz
+wget https://cpan.metacpan.org/authors/id/L/LE/LEONT/version-0.9932.tar.gz
+```
+
 ### CMake
 
 执行以下命令以编译安装 CMake。
@@ -136,6 +167,75 @@ make install
 ### Python
 
 编译安装 Python 3.10 需要用到我们编译安装的 OpenSSL。
+
+Python 的 pip 源配置文件路径：`$HOME/.config/pip/pip.conf`，`$VIRTUAL_ENV/pip.conf`。
+
+```sh
+./configure --prefix=$HOME/.local/python310 --with-openssl=$HOME/.local/openssl LDFLAGS="-L$HOME/.local/openssl/lib" CPPFLAGS="-I$HOME/.local/openssl/include" PKG_CONFIG_PATH="$HOME/.local/openssl/lib/pkgconfig"
+```
+
+### fish
+
+```sh
+wget https://github.com/PhilipHazel/pcre2/releases/download/pcre2-10.42/pcre2-10.42.tar.gz
+tar -xzvf pcre2-10.42.tar.gz
+cd pcre2-10.42
+./configure --prefix=$HOME/.local
+make
+make install
+
+wget https://ftp.gnu.org/gnu/gettext/gettext-0.21.1.tar.gz
+tar -xzvf gettext-0.21.1.tar.gz
+cd gettext-0.21.1
+./configure --prefix=$HOME/.local
+make
+make install
+
+export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH
+
+wget https://github.com/fish-shell/fish-shell/releases/download/3.7.1/fish-3.7.1.tar.xz
+tar -xvf fish-3.7.1.tar.gz
+cd fish-3.7.1
+
+mkdir build 
+
+cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/.local -DPCRE2_BUILD_PCRE2_8=ON # 不能启用 16，会报错
+make -j$(nproc)
+make install
+```
+
+### neovim
+
+```sh
+cd $HOME/src
+git clone -b stable --depth=1 https://github.com/neovim/neovim
+cd neovim
+make CMAKE_BUILD_TYPE=RelWithDebInfo CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim"
+make install
+```
+
+### tmux
+```sh
+git clone -b release-2.1.12-stable --depth=1 https://github.com/libevent/libevent.git
+./autogen.sh
+./configure --prefix=$HOME/.local
+make
+make install
+
+export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH
+export CPATH=$HOME/.local/include:$CPATH
+export LIBRARY_PATH=$HOME/.local/lib:$LIBRARY_PATH
+
+cd $HOME/src
+git clone -b 3.4 --depth=1 https://github.com/tmux/tmux.git
+cd tmux
+sh autogen.sh
+./configure --prefix=$HOME/.local && make
+```
+
+### glibc
+
+make -> texinfo > binutils -> glibc -> bear
 
 ### llvm17
 
