@@ -66,723 +66,20 @@ hugo.en.toml       hugo.zh.toml       menu.en.toml       minify.toml        pape
 
 ##### 基础配置
 
-在 `hugo.toml` 中，我们可以写入单配置文件下的 `config.toml`（后简称 `config.toml`）中的不属于任何 table 的键值对信息，`config.toml` 中除 `languages` 外的 table，都可以单独作为一个配置文件。
+在 `hugo.toml` 中，我们可以写入单配置文件下的 `hugo.toml` 或者 `config.toml`（后简称 `hugo.toml`）中的不属于任何 table 的键值对信息，`hugo.toml` 中除 `languages` 外的 table，都可以单独作为一个配置文件。
 
-```toml
-# blog/config.toml or blog/config/_default/hugo.toml
-baseURL = "https://blog.example.com"
+而 `hugo.toml` 中的 `langauges` table 中的内容，可以写到对应语言的 `hugo.${lang}.toml` 中，如 `hugo.zh.toml`，`hugo.en.toml` 中。如下所示：
 
-# 默认语言为中文，则 xxx.md 与 xxx.zh.md 都会被认为是中文
-defaultContentLanguage = "zh"
-# 为 true，则路径为 xxx/zh/posts/；为 false，则为 xxx/posts/
-defaultContentLanguageInSubdir = true 
-
-enableInlineShortcodes = true # 允许使用内联短码
-enableEmoji = true            # 允许使用 Emoji
-enableRobotsTXT = false       # 允许爬虫抓取到搜索引擎，此处设置不允许
-enableGitInfo = true
-
-buildDrafts = false
-buildFuture = false
-buildExpired = false
-
-paginate = 12 # 每页显示的文章数
-
-theme = "PaperMod"
-```
-
-而 `config.toml` 中的 `langauges` table 中的内容，可以写到对应语言的 `hugo.${lang}.toml` 中，如 `hugo.zh.toml`，`hugo.en.toml` 中。如下所示：
-
-```toml
-# config.toml
-[languages]
-## 中文
-[languages.zh]
-languageName = "简体中文"
-title = "翼仔的博客"
-weight = 1
-hasCJKLanguage = true
-```
-
-```toml
-# hugo.zh.toml
-weight = 1
-# hugo.toml 中 defaultContentLanguage 必须是这些 langaugeCode 中的一项 
-languageCode = "zh"
-languageName = "简体中文"
-# 在浏览器标签页显示的网站标题
-title = "翼仔"
-# whether to include Chinese/Japanese/Korean
-hasCJKLanguage = true
-# copyright description used only for seo schema
-# 版权信息，会显示在页脚，如果不指定 copyright，默认会显示网站标题、hugo、PaperMod
-# 如果指定了 copyright，则网站标题不会再在页脚显示
-# copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
-```
-
-可以看到 `config.toml` 中的 `languages` table 与 `hugo.zh.toml` 的对应关系，[languages.xx] 即对应 `langaugeCode = "xx"`，其他键值对复制过来即可。`hugo.en.toml` 的处理方法类似。
+注意 `hugo.toml` 中的 `defautlContentLanguage` 的值一定是 `hugo.zh.toml` 或者 `hugo.en.toml` 中的 `languageCode` 的值。`hugo.toml` 中的 `languages` table 与 `hugo.zh.toml` 存在对应关系，[languages.xx] 即对应 `langaugeCode = "xx"`，其他键值对直接复制过去即可。`hugo.en.toml` 的处理方法类似。
 
 #### 杂项配置
 
-`config.toml` 中的 `markup`、`outputs`、`minify`、`privacy`、`services`、`permalinks` 这几个 table 类似：
-
-```toml
-# config.toml
-[markup.goldmark.renderer]
-unsafe = true
-
-[minify]
-disableXML = true
-
-[permalinks] # 浏览器链接显示方式
-post = "/:title/"
-
-[outputs]
-home = ["HTML", "RSS", "JSON"]
-
-[privacy.vimeo]
-disabled = false
-simple = true
-
-[privacy.twitter]
-disabled = false
-enableDNT = true
-simple = true
-
-[privacy.instagram]
-disabled = false
-simple = true
-
-[privacy.youtube]
-disabled = false
-privacyEnhanced = true
-
-[services.instagram]
-disableInlineCSS = true
-
-[services.twitter]
-disableInlineCSS = true
-```
-
-```toml
-# makrup.toml
-[goldmark.renderer]
-unsafe = true
-
-[highlight]
-noClasses = false
-codeFences = true
-guessSyntax = true
-lineNos = true
-style = "monokai"
-
-# minify.toml
-disableXML = true
-
-# outputs.toml
-home = ["HTML", "RSS", "JSON"]
-
-# permalinks.toml
-post = "/:title/"
-
-# privacy.toml
-[vimeo]
-disabled = false
-simple = true
-
-[twitter]
-disabled = false
-enableDNT = true
-simple = true
-
-[instagram]
-disabled = false
-simple = true
-
-[youtube]
-disabled = false
-privacyEnhanced = true
-
-# services.toml
-[instagram]
-disableInlineCSS = true
-
-[twitter]
-disableInlineCSS = true
-```
-
-#### menu 配置
-
-再然后是 `menu` table，由于不同语言需要分别设置，故分成 `menu.zh.toml` 和 `menu.en.toml`：
-
-```toml
-[[languages.zh.menu.main]]
-identifier = "search"
-name = "搜索"
-url = "/search/"
-weight = 1
-
-[[languages.zh.menu.main]]
-identifier = "home"
-name = "主页"
-url = "/"
-weight = 2
-
-[[languages.zh.menu.main]]
-identifier = "posts"
-name = "文章"
-url = "posts"
-weight = 3
-
-[[languages.zh.menu.main]]
-identifier = "tags"
-name = "标签"
-url = "tags"
-weight = 20
-
-[[languages.zh.menu.main]]
-identifier = "archives"
-name = "时间线"
-url = "archives/"
-weight = 40
-
-[[languages.zh.menu.main]]
-identifier = "about"
-name = "关于"
-url = "about"
-weight = 50
-
-[[languages.zh.menu.main]]
-identifier = "links"
-name = "友链"
-url = "links"
-weight = 60
-
-[[languages.en.menu.main]]
-identifier = "search"
-name = "Search"
-url = "search"
-weight = 1
-
-[[languages.en.menu.main]]
-identifier = "home"
-name = "Home"
-url = "/"
-weight = 2
-
-[[languages.en.menu.main]]
-identifier = "posts"
-name = "Article"
-url = "posts"
-weight = 3
-
-[[languages.en.menu.main]]
-identifier = "tags"
-name = "Tags"
-url = "tags"
-weight = 20
-
-[[languages.en.menu.main]]
-identifier = "archives"
-name = "Archives"
-url = "archives/"
-weight = 40
-
-[[languages.en.menu.main]]
-identifier = "about"
-name = "About"
-url = "about"
-weight = 50
-```
-
-```toml
-# menu.zh.toml
-[[main]]
-identifier = "search"
-name = "搜索"
-url = "/search/"
-weight = 1
-
-[[main]]
-identifier = "home"
-name = "主页"
-url = "/"
-weight = 2
-
-[[main]]
-identifier = "posts"
-name = "文章"
-url = "posts"
-weight = 3
-
-[[main]]
-identifier = "tags"
-name = "标签"
-url = "tags"
-weight = 20
-
-[[main]]
-identifier = "archives"
-name = "时间线"
-url = "archives"
-weight = 40
-
-[[main]]
-identifier = "about"
-name = "关于"
-url = "about"
-weight = 50
-
-[[main]]
-identifier = "links"
-name = "友链"
-url = "links"
-weight = 60
-
-# menu.en.toml
-[[main]]
-identifier = "search"
-name = "Search"
-url = "/search/"
-weight = 1
-
-[[main]]
-identifier = "home"
-name = "Home"
-url = "/"
-weight = 2
-
-[[main]]
-identifier = "posts"
-name = "Posts"
-url = "posts/"
-weight = 3
-
-[[main]]
-identifier = "tags"
-name = "Tags"
-url = "tags"
-weight = 20
-
-[[main]]
-identifier = "archives"
-name = "Archives"
-url = "archives/"
-weight = 40
-
-[[main]]
-identifier = "about"
-name = "About"
-url = "about/"
-weight = 50
-
-[[main]]
-identifier = "links"
-name = "Links"
-url = "links/"
-weight = 60
-```
+`hugo.toml` 中的 `markup`、`outputs`、`minify`、`privacy`、`services`、`permalinks` 这几个 table 类似。 `[markup]` 下的内容可以都放到 `markup.toml` 中去，以此类推。
 
 #### params 配置
 最后是内容最多的 `params` table，它还有许多 subtable。
 
 `[[languages.zh.params.profileMode.buttons]]` 与 `params.zh.toml` 中的 `[[profileMode.butteons]] 对应，依此类推。
-
-```toml
-# config.toml
-[params]
-env = "production"           # to enable google analytics, opengraph, twitter-cards and schema
-author = "zwyyy456"
-defaultTheme = "auto"        # light or dark
-disableThemeToggle = false
-DateFormat = "2006-01-02"
-ShowShareButtons = false
-ShowReadingTime = true
-disableSpecailistPost = true
-displayFullLangName = true
-ShowPostNavLinks = true
-ShowBreadCrumbs = false # 是否显示文章路径
-ShowCodeCopyButtons = true
-math = true                  # 数学 latex 支持
-
-ShowAllPagesInArchive = true # archive 显示所有页面
-
-hideFooter = false    # 隐藏页脚
-ShowWordCounts = true
-VisitCount = true
-
-ShowLastMod = true # 显示文章最后更新时间
-ShowToc = true     # 显示目录
-TocOpen = true     # 自动展开目录
-
-comments = true
-mainSections = "post/tech" # 非 profile mode 显示文章列表
-
-[params.fuseOpts]
-isCaseSensitive = false
-shouldSort = true
-location = 0
-distance = 20 # 数值越大，允许匹配的字符距离越远
-threshold = 0.4 # 0~1，0 表示完全匹配
-minMatchCharLength = 2
-keys = ["title", "permalink", "summary"] # 关键词
-
-[params.twikoo]
-version = "1.4.11"
-
-# profile mode 中，会直接显示在头像下
-[[params.socialIcons]]
-name = "github"
-url = "https://github.com/zwyyy456"
-
-[[params.socialIcons]]
-name = "email"
-url = "zwyyy456@hotmail.com"
-
-[[params.socialIcons]]
-name = "RSS"
-url = "index.xml"
-
-# 网站默认图标
-[params.assets]
-favicon = "img/avatar.jpg"
-favicon16x16 = "img/avatar.jpg"
-favicon32x32 = "img/avatar.jpg"
-apple_touch_icon = "img/avatar.jpg"
-safari_pinned_tab = "img/avatar.jpg"
-disableHLJS = true               # 启用 chroma 主题
-
-# 博客网站左上角的标题与图片
-[languages.zh.params.label]
-text = "翼仔的博客"
-icon = "img/zwy_lake.jpg"
-iconHeight = 35
-
-[languages.zh.params.profileMode]
-enabled = true
-title = "何以解忧"
-subtitle = "快乐的时光总是短暂的"
-imageUrl = "img/Quirrel.jpg"
-imageWidth = 150
-imageHeight = 150
-
-# 在 profileMode 为 true 的情况下，显示在 socialIcon 下的按钮
-[[languages.zh.params.profileMode.buttons]]
-name = "技术"
-url = "posts/tech"
-
-[[languages.zh.params.profileMode.buttons]]
-name = "阅读"
-url = "posts/read"
-
-[[languages.zh.params.profileMode.buttons]]
-name = "我们"
-url = "posts/life"
-
-[[languages.zh.params.profileMode.buttons]]
-name = "分类"
-url = "categories"
-
-[languages.en.params.label]
-text = "zwyyy456's blog"
-icon = "img/zwy_lake.jpg"
-iconHeight = 35
-
-[languages.en.params.profileMode]
-enabled = true
-title = "zwyyy456"
-subtitle = "Sometimes naive, always on the way"
-imageUrl = "img/Quirrel.jpg"
-imageWidth = 150
-imageHeight = 150
-
-[[languages.en.params.profileMode.buttons]]
-name = "Tech"
-url = "posts/tech"
-
-[[languages.en.params.profileMode.buttons]]
-name = "Read"
-url = "posts/read"
-
-[[languages.en.params.profileMode.buttons]]
-name = "We"
-url = "posts/life"
-
-[[languages.en.params.profileMode.buttons]]
-name = "Categories"
-url = "categories"
-```
-
-```toml
-# params.toml
-env = "production"           # to enable google analytics, opengraph, twitter-cards and schema
-author = "zwyyy456"
-defaultTheme = "auto"        # light or dark
-disableThemeToggle = false
-DateFormat = "2006-01-02"
-ShowShareButtons = false
-ShowReadingTime = true
-disableSpecailistPost = true
-displayFullLangName = true
-ShowPostNavLinks = true
-ShowBreadCrumbs = false      # 顶栏显示当前路径
-ShowCodeCopyButtons = true
-math = true                  # 数学 latex 支持
-ShowAllPagesInArchive = true # archive 显示所有页面
-hideFooter = false           # 隐藏页脚
-ShowWordCounts = true
-VisitCount = true
-
-# ShowLastMod = true # 显示文章最后更新时间
-ShowToc = true  # 显示目录
-TocOpen = true  # 自动展开目录
-comments = true
-
-[assets]
-favicon = "img/avatar.jpg"
-favicon16x16 = "img/avatar.jpg"
-favicon32x32 = "img/avatar.jpg"
-apple_touch_icon = "img/avatar.jpg"
-safari_pinned_tab = "img/avatar.jpg"
-disableHLJS = true                   # 启用 chroma 主题
-
-[fuseOpts]
-isCaseSensitive = false
-shouldSort = true
-location = 0
-distance = 20
-threshold = 0.4
-minMatchCharLength = 2
-keys = ["title", "permalink", "summary"] # 关键词
-
-[twikoo]
-version = "1.4.11"
-
-# params.zh.toml
-[label]
-text = "翼仔的博客"
-icon = "img/zwy_lake.jpg"
-iconHeight = 35
-
-# 在 profileMode 为 false 时才有用
-[homeInfoParams]
-Title = "PaperMods's Demo"
-Content = '''
-👋 Welcome to demo page of Hugo's theme PaperMod!
-
-- **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
-
-- Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
-
-- PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
-'''
-
-[profileMode]
-enabled = true
-title = "何以解忧"
-subtitle = "快乐的时光总是短暂的"
-imageUrl = "img/Quirrel.jpg"
-imageWidth = 150
-imageHeight = 150
-
-[[socialIcons]]
-name = "github"
-url = "https://github.com/zwyyy456"
-
-[[socialIcons]]
-name = "email"
-url = "zwyyy456@hotmail.com"
-
-[[socialIcons]]
-name = "RSS"
-url = "index.xml"
-
-[[profileMode.buttons]]
-name = "技术"
-url = "posts/tech"
-
-[[profileMode.buttons]]
-name = "阅读"
-url = "posts/read"
-
-[[profileMode.buttons]]
-name = "生活"
-url = "posts/life"
-
-[[profileMode.buttons]]
-name = "分类"
-url = "categories"
-
-# params.en.toml
-
-[label]
-text = "zwyyy456's blog"
-icon = "img/zwy_lake.jpg"
-iconHeight = 35
-
-[profileMode]
-enabled = true
-title = "zwyyy456"
-subtitle = "Sometimes naive, always on the way."
-imageUrl = "img/Quirrel.jpg"
-imageWidth = 150
-imageHeight = 150
-
-[[socialIcons]]
-name = "github"
-url = "https://github.com/zwyyy456"
-
-[[socialIcons]]
-name = "email"
-url = "zwyyy456@hotmail.com"
-
-[[socialIcons]]
-name = "RSS"
-url = "index.xml"
-
-[[profileMode.buttons]]
-name = "Tech"
-url = "posts/tech"
-
-[[profileMode.buttons]]
-name = "Read"
-url = "posts/read"
-
-[[profileMode.buttons]]
-name = "Life"
-url = "posts/life"
-
-[[profileMode.buttons]]
-name = "Categories"
-url = "categories"
-```
-
-#### 友链设置
-
-首先在 `blog/layouts/shortcodes` 目录下创建一个 `friend.html` 文件，在其中添加以下内容：
-
-```html
-{{- if .IsNamedParams -}}
-<a target="_blank" href={{ .Get "url" }} title={{ .Get "name" }} class="friendurl">
-  <div class="frienddiv">
-    <div class="frienddivleft">
-      <img class="myfriend" src={{ .Get "logo" }} />
-    </div>
-    <div class="frienddivright">
-      <div class="friendname">{{- .Get "name" -}}</div>
-      <div class="friendinfo">{{- .Get "word" -}}</div>
-    </div>
-  </div>
-</a>
-{{- end }}
-```
-
-然后在 `assets/css/extended/blank.css` 中添加如下内容：
-
-```css
-.friendurl {
-    text-decoration: none !important;
-    color: black;
-    box-shadow: none !important;
-}
-
-.myfriend {
-    width: 56px !important;
-    height: 56px !important;
-    border-radius: 50%!important;
-    padding: 2px;
-    margin-top: 20px !important;
-    margin-left: 14px !important;
-    background-color: #fff;
-}
-
-.frienddiv {
-    overflow: auto;
-    height: 100px;
-    width: 49%;
-    display: inline-block !important;
-    border-radius: 5px;
-    background: none;
-    
-    -webkit-transition: all ease-out 0.3s;
-    -moz-transition: all ease-out 0.3s;
-    -o-transition: all ease-out 0.3s;
-    transition: all ease-out 0.3s;
-}
-
-.dark .frienddiv:hover {
-    background: var(--code-bg);
-}
-
-.frienddiv:hover {
-    background: var(--theme);
-    transition: transform 1s;
-    webkit-transform: scale(1.1);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.1);
-}
-
-.frienddiv:hover .frienddivleft img { 
-    transition: 0.9s !important;
-    -webkit-transition: 0.9s !important;
-    -moz-transition: 0.9s !important;
-    -o-transition: 0.9s !important;
-    -ms-transition: 0.9s !important;
-    transform: rotate(360deg) !important;
-    -webkit-transform: rotate(360deg) !important;
-    -moz-transform: rotate(360deg) !important;
-    -o-transform: rotate(360deg) !important;
-    -ms-transform: rotate(360deg) !important;
-}
-
-.frienddivleft {
-    width: 92px;
-    float: left;
-    margin-right: -5px;
-}
-
-.frienddivright {
-    margin-top: 18px;
-    margin-right: 18px;
-}
-
-.friendname {
-    text-overflow: ellipsis;
-    font-size: 100%;
-    margin-bottom: 5px;
-    color: var(--primary);
-}
-
-.friendinfo {
-    text-overflow: ellipsis;
-    font-size: 70%;
-    color: var(--primary);
-}
-
-@media screen and (max-width: 600px) {
-    .friendinfo {
-        display: none;
-    }
-    .frienddivleft {
-        width: 84px;
-        margin: auto;
-    }
-    .frienddivright {
-        height: 100%;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .friendname {
-        font-size: 18px;
-    }
-}
-```
-
-然后在 `links.md` 或者 `link.en.md` 中填写内容即可。
 
 #### 添加 Latex 支持
 
@@ -820,6 +117,168 @@ url = "categories"
 
 #### 设置侧边显示目录
 
+复制 `themes/PaperMod/layouts/partials/toc.html` 到 `layouts/partials/` 目录下，然后编辑 `toc.html`，在 `</div>` 和 `{{- end }}` 之间追加以下内容：
+```html
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+         // Make the first header active
+         activeElement = elements[0];
+         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+     }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        // Check if there is an object in the top half of the screen or keep the last item active
+        activeElement = Array.from(elements).find((element) => {
+            if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                return element;
+            }
+        }) || activeElement
+
+        elements.forEach(element => {
+             const id = encodeURI(element.getAttribute('id')).toLowerCase();
+             if (element === activeElement){
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+             } else {
+                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+             }
+         })
+     }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10) ;
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+```
+
+然后在 `assets/css/extended` 目录下创建 `toc.css` 文件，内容为：
+
+```css
+:root {
+    --nav-width: 1380px;
+    --article-width: 650px;
+    --toc-width: 250px;
+}
+
+.toc {
+    margin: 0 2px 40px 2px;
+    border: 1px solid var(--border);
+    background: var(--entry);
+    border-radius: var(--radius);
+    padding: 0.4em;
+}
+
+.toc-container.wide {
+    position: absolute;
+    height: 100%;
+    border-right: 1px solid var(--border);
+    left: calc((var(--toc-width) + var(--gap)) * -1);
+    top: calc(var(--gap) * 2);
+    width: var(--toc-width);
+}
+
+.wide .toc {
+    position: sticky;
+    top: var(--gap);
+    border: unset;
+    background: unset;
+    border-radius: unset;
+    width: 100%;
+    margin: 0 2px 40px 2px;
+}
+
+.toc details summary {
+    cursor: zoom-in;
+    margin-inline-start: 20px;
+    padding: 12px 0;
+}
+
+.toc details[open] summary {
+    font-weight: 500;
+}
+
+.toc-container.wide .toc .inner {
+    margin: 0;
+}
+
+.active {
+    font-size: 110%;
+    font-weight: 600;
+}
+
+.toc ul {
+    list-style-type: circle;
+}
+
+.toc .inner {
+    margin: 0 0 0 20px;
+    padding: 0px 15px 15px 20px;
+    font-size: 8px;
+
+    /*目录显示高度*/
+    max-height: 83vh;
+    overflow-y: auto;
+}
+
+.toc .inner::-webkit-scrollbar-thumb {
+    /*滚动条*/
+    background: var(--border);
+    border: 7px solid var(--theme);
+    border-radius: var(--radius);
+}
+
+.toc li ul {
+    margin-inline-start: calc(var(--gap) * 0.5);
+    list-style-type: none;
+}
+
+.toc li {
+    list-style: none;
+    font-size: 0.95rem;
+    padding-bottom: 5px;
+}
+
+.toc li a:hover {
+    color: var(--secondary);
+}
+```
+
+### doit
+
+这个主题非常完善了，奈何
+
+
+
+
 ## 部署博客
 
 Hugo 博客可以很容易的部署到 Vercel 或者 Netlify 上，二者均免费。
@@ -840,4 +299,12 @@ Hugo 博客可以很容易的部署到 Vercel 或者 Netlify 上，二者均免�
 如下图所示，点击 `Deploy` 即可：
 
 ![bVYCWn](https://pic-upyun.zwyyy456.tech/uPic/bVYCWn.png)
+
+> 注意，不管是部署到 Vercel 还是 Netlify，**git submodule 对应的 repo 一定不能是私有的**，即只能通过 https 去 clone submodule！
+
+### 部署至 Netlify
+
+部署步骤类似，几乎可以说是傻瓜式的，点击 Deploy 之前，build settings 设置成如下即可，同样记得设置环境变量，netlify 默认使用的是 hugo extended 版本。
+
+![YGmLYQ](https://pic-upyun.zwyyy456.tech/uPic/YGmLYQ.png)
 
