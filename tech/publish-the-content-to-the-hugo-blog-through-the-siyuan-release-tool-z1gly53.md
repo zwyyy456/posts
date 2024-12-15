@@ -1,18 +1,22 @@
 ---
 title: 通过思源发布工具将内容发布到 Hugo
-slug: publish-the-content-to-the-hugo-blog-through-the-siyuan-release-tool-z1gly53
-url: >-
-  /post/publish-the-content-to-the-hugo-blog-through-the-siyuan-release-tool-z1gly53.html
-date: '2024-11-21 23:32:04+08:00'
-lastmod: '2024-12-15 14:44:33+08:00'
+authors:
+  - zwyyy456
+categories:
+  - setup
 tags:
   - hugo
   - siyuan
-categories:
-  - setup
-keywords: hugo,siyuan
-toc: true
-isCJKLanguage: true
+description: ''
+weight: null
+slug: publish-siyuan-article-to-hugo.zh
+draft: false
+comments: true
+showToc: true
+TocOpen: true
+hidemeta: false
+disableShare: true
+showbreadcrumbs: false
 ---
 
 
@@ -62,8 +66,6 @@ showbreadcrumbs: false # 顶部显示当前路径
 ```
 
 因此，这里需要我修改的 yml 中，其实只有 `date`​ 与 `lastmod`​、`title`​ 这三个字段不变，其他都还是要修改。
-
-‍
 
 该插件似乎还可以将仓库中已经存在的 `.md`​ 文件与思源笔记中的文章对应起来，该功能留待以后探索吧。
 
