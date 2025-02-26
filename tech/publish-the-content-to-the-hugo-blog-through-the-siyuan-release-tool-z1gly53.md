@@ -27,7 +27,7 @@ showbreadcrumbs: false
 
 其中，仓库名是你的 GitHub 中的对应仓库的仓库名，我这里是 `posts`​，作为 submodule 添加到我的 hugo 博客的仓库中，`存储目录`​ 这里其实不太关键，只有在点击一键发布的时候，才会被用到，我这里会默认选择 `tech`​，与个人设置有关，如果是发布到 Hugo 博客，那么这个发布工具做的实质上就是将本篇文章转换成 `md`​ 文件，添加到 GitHub 的对应的仓库的对应目录下，`文件规则`​ 对应的是生成文件名的规则。
 
-​![jVWdCm](https://pic-upyun.zwyyy456.tech/uPic/jVWdCm.png)​
+​![image](https://pic-upyun.zwyyy456.tech/siyuan20250226221447.pngnull)​
 
 文章预览规则和预览规则可以先不管，暂时保持默认即可，发布目录也保持 `tech`​，这里还没明确发布目录和存储目录各自的作用，
 
