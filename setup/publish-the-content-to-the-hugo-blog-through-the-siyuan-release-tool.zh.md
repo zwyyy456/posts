@@ -32,7 +32,7 @@ showbreadcrumbs: false
 
 其中，仓库名是你的 GitHub 中的对应仓库的仓库名，我这里是 `posts`​，作为 submodule 添加到我的 hugo 博客的仓库中，`存储目录`​ 这里其实不太关键，只有在点击一键发布的时候，才会被用到，我这里会默认选择 `tech`​，与个人设置有关，如果是发布到 Hugo 博客，那么这个发布工具做的实质上就是将本篇文章转换成 `md`​ 文件，添加到 GitHub 的对应的仓库的对应目录下，`文件规则`​ 对应的是生成 `.md`​ 文件的文件名的规则。支持设置为 `[filename].md`​ 以及 `[slug].md`​ 等，其中 `filename`​ 表示的是显示在思源左侧的文档树中的文件名，`slug`​ 则是本工具会根据文件名的英文翻译加上随机字符串自动生成的别名。
 
-​![image](https://pic-upyun.zwyyy456.tech/siyuan20250226233348.pngnull)​
+![image](https://pic-upyun.zwyyy456.tech/siyuan20250226233348.pngnull)
 
 文章预览规则和预览规则可以先不管，暂时保持默认即可，发布目录也保持 `tech`​。
 
@@ -58,7 +58,7 @@ showbreadcrumbs: false
 
 我的发布工具的 `偏好设置`​ 的设置如下：
 
-​![image](https://pic-upyun.zwyyy456.tech/siyuan20250226233920.pngnull)​
+![image](https://pic-upyun.zwyyy456.tech/siyuan20250226233920.pngnull)
 
 建议勾选 `去除正文 h1`​，否则生成的文章中，会生成一个文章名对应的一级标题，其中勾选 `显示文章管理菜单`​，则点击发布工具的按钮时，会有 `仪表盘`​ 选项，其余选项是否勾选建议自行决定。
 
@@ -74,6 +74,8 @@ showbreadcrumbs: false
 
 点击 `偏好设置`​ -> `文章绑定`​，对于已经通过思源发布工具发布的文章，其内容如下图所示：
 
-​![image](https://pic-upyun.zwyyy456.tech/siyuan20250303232028.pngnull)​
+![image](https://pic-upyun.zwyyy456.tech/siyuan20250303232357.pngnull)
 
-因此，如果想将思源中的文档与 hugo 中已经发布的文章绑定，则在思源中打开该文档，点击 `偏好设置 -> 文章绑定`​，`Hugo`​ 这一栏，填写 md 文件在仓库的完整路径。
+因此，如果想将思源中的文档与 hugo 中已经发布的文章绑定，则在思源发布工具中打开该文档，点击 `偏好设置 -> 文章绑定`​，`Hugo`​ 这一栏，填写 md 文件在仓库的完整路径。
+
+‍
