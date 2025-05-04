@@ -1,6 +1,6 @@
 ---
 title: Mac 开发环境配置
-slug: ' mac-dev-config.zh'
+slug: mac-dev-config.zh
 date: '2025-05-04 18:06:12+08:00'
 lastmod: '2025-05-04 18:06:12+08:00'
 authors: zwyyy456
