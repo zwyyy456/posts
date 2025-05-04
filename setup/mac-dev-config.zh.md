@@ -1,6 +1,6 @@
 ---
-title: ''
-slug: '-z1kc5h9'
+title: Mac 开发环境配置
+slug: ' mac-dev-config.zh'
 date: '2025-05-04 18:06:12+08:00'
 lastmod: '2025-05-04 18:06:12+08:00'
 authors: zwyyy456
@@ -10,6 +10,11 @@ showToc: true
 hidemeta: false
 disableShare: true
 showbreadcrumbs: false
+categories:
+  - setup
+tags:
+  - geek
+  - tips
 ---
 
 
