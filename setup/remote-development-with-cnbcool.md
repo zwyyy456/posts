@@ -30,17 +30,17 @@ vscode 的 remote 插件在我看来，简直是 vscode 的杀手级特性，它
 
 > 事实上试过通过脚本与 git 进行自动的代码同步，但总觉得有潜在的问题。
 
-## [cnb.cool](https://cnb.cool)：一个全新且几乎完美的解决方案
+## cnb.cool：一个全新且几乎完美的解决方案
 
 其实我是先了解的腾讯的 CODING，他在像 GitHub 那样提供代码托管服务的同时，还提供了云原生构建与开发功能，而 [cnb.cool](https://cnb.cool) 则属于是 CODING 的下一代产品，可以基于 Dockerfile 声明开发环境，和代码一起管理。
 
 在 [cnb.cool](https://cnb.cool) 中，进行远程开发很简单，新建一个仓库，创建好之后，直接点击的 `云原生开发`​ 按钮，即可创建一个开发环境。如果是已经创建好的仓库，点击右上角的 `云原生开发`​ 即可。
 
-​![image](https://pic-upyun.zwyyy456.tech/siyuanimage-20250224234822-6sbw4ur.pngnull)​
+![image](https://pic-upyun.zwyyy456.tech/siyuanimage-20250224234822-6sbw4ur.pngnull)
 
 创建好开发环境之后，可以选择使用 WebIDE 或者 VSCode 或者 Cursor 打开，后两者都是基于 vscode 的 remote 插件实现的，WebIDE 则是基于 code-server 实现的网页版 vscode。
 
-​![image](https://pic-upyun.zwyyy456.tech/siyuanimage-20250224234844-w27ei9y.pngnull)​
+![image](https://pic-upyun.zwyyy456.tech/siyuanimage-20250224234844-w27ei9y.pngnull)
 
 构建开发环境，除了第一次耗时可能较久之外，只要不改动 `.ide/Dockerfile`​ 文件，后面创建开发环境都很快，只需要十几秒就可以完成了。其中，默认使用 `cnbcool/default-dev-env:lastest`​ 作为开发环境基础镜像，具体使用啥镜像，可以在 Dockerfile 中声明。
 
@@ -48,7 +48,7 @@ vscode 的 remote 插件在我看来，简直是 vscode 的杀手级特性，它
 
 [cnb.cool](https://cnb.cool) 作为代码托管平台，相关的功能也比较齐全，由于我比较关心的是远程开发相关功能，基本也只是个人业余开发，故在此不多赘述。
 
-## 自定义 [cnb.cool](https://cnb.cool) 的远程开发环境
+## 自定义 cnb.cool 的远程开发环境
 
 前面提到，[cnb.cool](https://cnb.cool) 是基于 `.ide/Dockerfile`​ 来声明开发环境的，因此，可以修改这个 Dockerfile，通过 `From node:20`​ 选定基础的 docker 镜像，通过 `RUN code-server --install extension redhat.vscode-yaml`​ 来安装所需的 vscode 插件，值得注意的是，其插件市场并非 vscode 官方的插件市场，有些插件可能会找不到；同时可以通过 `RUN apt install clangd clang`​ 等来安装对应语言的开发环境。
 
